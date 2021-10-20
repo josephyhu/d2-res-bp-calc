@@ -1,3 +1,6 @@
+<?php
+$character = $_POST['character'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +28,7 @@
     <h2>Blocking</h2>
     <form action="blocking.php" method="post">
         <label for="character">Character<span class="required">*</span></label>
-        <select id="character" name="character" required>
-            <option selected disabled>---SELECT A CHARACTER---</option>
+        <select id="character" name="character">
             <option value="ama">Amazon</option>
             <option value="ass">Assassin</option>
             <option value="bar">Barbarian</option>
@@ -35,32 +37,32 @@
             <option value="pal">Paladin</option>
             <option value="sor">Sorceress</option>
         </select><br>
+        <div id="divAma"></div>
         <input type="checkbox" id="holy-shield" name="holy-shield">
         <label for="holy-shield">Holy Shield (Paladin Only)</label><br>
         <label for="shield">Shield<span class="required">*</span></label>
-        <select id="shield" name="shield" required>
-            <option selected disabled>---SELECT A SHIELD--</option>
+        <select id="shield" name="shield">
             <option value="shield-of-blocking">Magic/Rare/Crafted Shield of Blocking</option>
             <option value="shield-of-deflecting">Magic/Rare/Crafted Shield of Deflecting</option>
-            <option value="griswolds-honor-shield" class="set">Griswold's Honor Vortex Shield (Paladin Only)</option>
-            <option value="taebaeks-glory-shield" class="set">Taebaek's Glory Ward</option>
-            <option value="whitstans-guard-shield" class="set">Whitstan's Guard Round Shield</option>
-            <option value="homunculus-shield" class="unique">Homunculus Hierophant Trophy (Necromancer Only)</option>
-            <option value="alma-negra-shield" class="unique">Alma Negra Sacred Rondache (Paladin Only)</option>
-            <option value="hoz-shield" class="unique">Herald of Zakarum Gilded Shield (Paladin Only)</option>
-            <option value="pelta-lunata-shield" class="unique">Pelta Lunata Buckler</option>
-            <option value="steelclash-shield" class="unique">Steelclash Kite Shield</option>
-            <option value="visceratuant-shield" class="unique">Visceratuant Defender</option>
-            <option value="mosers-shield" class="unique">Moser's Blessed Circle Round Shield</option>
-            <option value="stormchaser-shield" class="unique">Stormchaser Scutum</option>
-            <option value="radaments-sphere-shield" class="unique">Radament's Sphere Ancient Shield</option>
-            <option value="blackoak-shield" class="unique">Blackoak Shield Luna</option>
-            <option value="stormshield-shield" class="unique">Stormshield Monarch</option>
-            <option value="spirit-ward-shield" class="unique">Spirit Ward Ward</option>
-            <option value="rhyme-shield" class="runeword">Rhyme Shield</option>
-            <option value="exile-shield" class="runeword">Exile Shield (Paladin Only)</option>
-            <option value="sanctuary-shield" class="runeword">Sanctuary Shield</option>
-            <option value="splendor-shield" class="runeword">Splendor Shield</option>
+            <option value="griswolds-honor-shield">Griswold's Honor Vortex Shield (Paladin Only)</option>
+            <option value="taebaeks-glory-shield">Taebaek's Glory Ward</option>
+            <option value="whitstans-guard-shield">Whitstan's Guard Round Shield</option>
+            <option value="homunculus-shield">Homunculus Hierophant Trophy (Necromancer Only)</option>
+            <option value="alma-negra-shield">Alma Negra Sacred Rondache (Paladin Only)</option>
+            <option value="hoz-shield">Herald of Zakarum Gilded Shield (Paladin Only)</option>
+            <option value="pelta-lunata-shield">Pelta Lunata Buckler</option>
+            <option value="steelclash-shield">Steelclash Kite Shield</option>
+            <option value="visceratuant-shield">Visceratuant Defender</option>
+            <option value="mosers-shield">Moser's Blessed Circle Round Shield</option>
+            <option value="stormchaser-shield">Stormchaser Scutum</option>
+            <option value="radaments-sphere-shield">Radament's Sphere Ancient Shield</option>
+            <option value="blackoak-shield">Blackoak Shield Luna</option>
+            <option value="stormshield-shield">Stormshield Monarch</option>
+            <option value="spirit-ward-shield">Spirit Ward Ward</option>
+            <option value="rhyme-shield">Rhyme Shield</option>
+            <option value="exile-shield">Exile Shield (Paladin Only)</option>
+            <option value="sanctuary-shield">Sanctuary Shield</option>
+            <option value="splendor-shield">Splendor Shield</option>
         </select><br>
         <input type="checkbox" id="shael" name="shael">
         <label for="shael">Socket Shael Rune to shield (Non-runeword shields only)</label><br>
@@ -68,8 +70,8 @@
         <select id="other-items" name="other-items">
             <option selected disabled>---SELECT OTHER ITEMS---</option>
             <option value="guardian-angel-armor">Guardian Angel Templar Coat</option>
-        </select>
-        <button type="submit">Calculate</button>
+        </select><br>
+        <button type="submit" id="btn">Calculate</button>
     </form>
     <div id="calc">
         <?php
@@ -78,6 +80,7 @@
         $shield = $_POST['shield'];
         $shael = $_POST['shael'];
         $items = $_POST['other-items'];
+        $weap1 = $_POST['weap1'];
         $rate = 0;
         if ($shael) {
 	        $rate += 20;
@@ -106,7 +109,159 @@
 	        } else if ($shield === 'blackoak-shield') {
 		        $rate += 50;
 	        }
-	        if ($character === 'ass') {
+            if ($character === 'ama') {
+                if ($weap1) {
+	                echo '<h3>Amazon</h3>';
+	                echo '<table>';
+                    echo '<caption>1_H Swinging Weapon</caption>';
+	                echo '<thead>';
+	                echo '<tr>';
+	                echo '<th>Faster Block Rate</th>';
+	                echo '<th>Block Frames</th>';
+	                echo '</tr>';
+	                echo '</thead>';
+	                echo '<tbody>';
+	                echo '<tr>';
+	                echo '<td>0</td>';
+	                echo '<td>17</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>4</td>';
+	                echo '<td>16</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>6</td>';
+	                echo '<td>15</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>11</td>';
+	                echo '<td>14</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>15</td>';
+	                echo '<td>13</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>23</td>';
+	                echo '<td>12</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>29</td>';
+	                echo '<td>11</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>40</td>';
+	                echo '<td>10</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>56</td>';
+	                echo '<td>9</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>80</td>';
+	                echo '<td>8</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>120</td>';
+	                echo '<td>7</td>';
+	                echo '</tr>';
+	                echo '</tbody>';
+	                echo '</table>';
+
+	                if ($rate < 4) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 17<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (4 - $rate) . "%";
+	                } else if ($rate < 6) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 16<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (6 - $rate) . "%";
+	                } else if ($rate < 11) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 15<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (11 - $rate) . "%";
+	                } else if ($rate < 15) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 14<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (15 - $rate) . "%";
+	                } else if ($rate < 23) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 13<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (23 - $rate) . "%";
+	                } else if ($rate < 29) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 12<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (29 - $rate) . "%";
+	                } else if ($rate < 40) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 11<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (40 - $rate) . "%";
+	                } else if ($rate < 56) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 10<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (56 - $rate) . "%";
+	                } else if ($rate < 80) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 9<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (80 - $rate) . "%";
+	                } else if ($rate < 120) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 8<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (120 - $rate) . "%";
+	                } else {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 7<br>";
+		                echo "Further Faster Block Rate unnecessary.";
+	                }
+                } else {
+	                echo '<h3>Amazon</h3>';
+	                echo '<table>';
+                    echo '<caption>Any other weapon</caption>';
+	                echo '<thead>';
+	                echo '<tr>';
+	                echo '<th>Faster Block Rate</th>';
+	                echo '<th>Block Frames</th>';
+	                echo '</tr>';
+	                echo '</thead>';
+	                echo '<tbody>';
+	                echo '<tr>';
+	                echo '<td>0</td>';
+	                echo '<td>5</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>13</td>';
+	                echo '<td>4</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>32</td>';
+	                echo '<td>3</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>86</td>';
+	                echo '<td>2</td>';
+	                echo '</tr>';
+	                echo '</tbody>';
+	                echo '</table>';
+
+	                if ($rate < 13) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 5<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (13 - $rate) . "%";
+	                } else if ($rate < 32) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 4<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (32 - $rate) . "%";
+	                } else if ($rate < 86) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 3<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (86 - $rate) . "%";
+	                } else {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 2<br>";
+		                echo "Further Faster Block Rate unnecessary.";
+	                }
+                }
+            } else if ($character === 'ass') {
 		        echo '<h3>Assassin</h3>';
 		        echo '<table>';
 		        echo '<thead>';

@@ -31,12 +31,3 @@ nav ul li a:focus {
 .required {
     color: red;
 }
-.set {
-    color: green;
-}
-.unique {
-    color: gold;
-}
-.runeword {
-    color: orange;
-}
