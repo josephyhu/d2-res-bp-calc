@@ -29,6 +29,7 @@ $character = $_POST['character'];
     <form action="blocking.php" method="post">
         <label for="character">Character<span class="required">*</span></label>
         <select id="character" name="character">
+            <option disabled selected>---SELECT A CHARATER---</option>
             <option value="ama">Amazon</option>
             <option value="ass">Assassin</option>
             <option value="bar">Barbarian</option>
@@ -42,6 +43,7 @@ $character = $_POST['character'];
         <label for="holy-shield">Holy Shield (Paladin Only)</label><br>
         <label for="shield">Shield<span class="required">*</span></label>
         <select id="shield" name="shield">
+            <option disabled selected>---SELECT A SHIELD---</option>
             <option value="shield-of-blocking">Magic/Rare/Crafted Shield of Blocking</option>
             <option value="shield-of-deflecting">Magic/Rare/Crafted Shield of Deflecting</option>
             <option value="griswolds-honor-shield">Griswold's Honor Vortex Shield (Paladin Only)</option>
@@ -71,7 +73,7 @@ $character = $_POST['character'];
             <option selected disabled>---SELECT OTHER ITEMS---</option>
             <option value="guardian-angel-armor">Guardian Angel Templar Coat</option>
         </select><br>
-        <button type="submit">Calculate</button>
+        <button type="submit" id="btn">Calculate</button>
     </form>
     <div id="calc">
         <?php
@@ -80,7 +82,7 @@ $character = $_POST['character'];
         $shield = $_POST['shield'];
         $shael = $_POST['shael'];
         $items = $_POST['other-items'];
-        $weap1 = $_POST['weap1'];
+        $weap1h = $_POST['1hweap'];
         $rate = 0;
         if ($shael) {
 	        $rate += 20;
@@ -110,7 +112,7 @@ $character = $_POST['character'];
 		        $rate += 50;
 	        }
             if ($character === 'ama') {
-                if ($weap1) {
+                if ($weap1h) {
 	                echo '<h3>Amazon</h3>';
 	                echo '<table>';
                     echo '<caption>1_H Swinging Weapon</caption>';

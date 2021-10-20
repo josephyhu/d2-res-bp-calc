@@ -12,11 +12,9 @@ $(document).ready(function() {
             $("#shield option[value='exile-shield']").removeAttr("disabled");
         }
         if ($(this).val() === "ama") {
-            htmlAma = "<label>Type of Weapon (Amazon Only)</label><br>";
-            htmlAma += "<input type='radio' id='weap1' name='weap1'>";
-            htmlAma += "<label for='weap1'>1-H Swinging Weapon (Axe, Club, Mace, Scepter, Sword, Throwing Axe, or Wand)</label><br>";
-            htmlAma += "<input type='radio' id='weap2'>";
-            htmlAma += "<label for='weap2'>Any Other Weapon</label><br>";
+            htmlAma = "<label>Type of Weapon (Amazon Only)<span class='required'>*</span></label><br>";
+            htmlAma += "<input type='checkbox' id='1hweap' name='1hweap' required>";
+            htmlAma += "<label for='1hweap'>1-H Swinging Weapon (Axe, Club, Mace, Scepter, Sword, Throwing Axe, or Wand)</label><br>";
             $("#divAma").html(htmlAma);
         } else {
             $("#divAma").html("");
@@ -28,10 +26,17 @@ $(document).ready(function() {
         }
     });
     $("#shield").on("change", function() {
-        if ($(this).find(':selected').hasClass("runeword")) {
+        if ($(this).find(":selected").hasClass("runeword")) {
             $("#shael").attr("disabled", "disabled");
         } else {
             $("#shael").removeAttr("disabled");
+        }
+    });
+    $("#btn").click(function() {
+        if ($("#character").find(":selected").prop("disabled")) {
+            alert("Please select a character.");
+        } else if ($("#shield").find(":selected").prop("disabled")) {
+            alert ("Please select a shield.");
         }
     });
 });
