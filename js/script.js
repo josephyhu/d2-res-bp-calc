@@ -34,11 +34,4 @@ $(document).ready(function() {
             $("#shael").removeAttr("disabled");
         }
     });
-    $("#btn").click(function() {
-        if ($("#character") === '') {
-            alert("Please select a character.");
-        } else if ($("#shield") === '') {
-            alert("Please select a shield.");
-        }
-    });
 });

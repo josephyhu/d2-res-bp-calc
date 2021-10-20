@@ -71,7 +71,7 @@ $character = $_POST['character'];
             <option selected disabled>---SELECT OTHER ITEMS---</option>
             <option value="guardian-angel-armor">Guardian Angel Templar Coat</option>
         </select><br>
-        <button type="submit" id="btn">Calculate</button>
+        <button type="submit">Calculate</button>
     </form>
     <div id="calc">
         <?php
