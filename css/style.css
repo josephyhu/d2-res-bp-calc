@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    color: white;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: gray;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: lightgray;
+}
+nav ul li a:focus {
+    background-color: lightgray;
+}
+.active {
+    background-color: green;
+}
+.required {
+    color: red;
+}
+.set {
+    color: green;
+}
+.unique {
+    color: gold;
+}
+.runeword {
+    color: orange;
+}
