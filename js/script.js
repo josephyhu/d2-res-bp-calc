@@ -5,6 +5,7 @@ $(document).ready(function() {
             $("#shield option[value='alma-negra-shield']").attr("disabled", "disabled");
             $("#shield option[value='hoz-shield']").attr("disabled", "disabled");
             $("#shield option[value='exile-shield']").attr("disabled", "disabled");
+            $("#divPal").html("");
         } else {
             htmlPal = "<input type='checkbox' id='holy-shield' name='holy-shield'>";
             htmlPal += "<label for='holy-shield'>Holy Shield</label>";
@@ -21,6 +22,17 @@ $(document).ready(function() {
             $("#divAma").html(htmlAma);
         } else {
             $("#divAma").html("");
+        }
+        if ($(this).val() === 'dru') {
+            htmlDru = "<label for='form'>Form (Druid Only)<span class='required'>*</span></label>";
+            htmlDru += "<select id='form' name='form' required>";
+            htmlDru += "<option disabled selected>---SELECT DRUID FORM---</option>";
+            htmlDru += "<option value='human'>Human</option>";
+            htmlDru += "<option value='werewolf'>Werewolf</option>";
+            htmlDru += "<option value='werebear'>Werebear</option>";
+            $("#divDru").html(htmlDru);
+        } else {
+            $("#divDru").html("");
         }
         if ($(this).val() !== "nec") {
             $("#shield option[value='necromancer-shields']").attr("disabled", "disabled");
@@ -63,6 +75,8 @@ $(document).ready(function() {
             alert("Please select a character.");
         } else if ($("#shield").find(":selected").prop("disabled")) {
             alert ("Please select a shield.");
+        } else if($("#form").find(":selected").prop("disabled")) {
+            alert ("Please select Druid form.");
         }
     });
 });

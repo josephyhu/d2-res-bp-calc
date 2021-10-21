@@ -39,6 +39,7 @@ $character = $_POST['character'];
             <option value="sor">Sorceress</option>
         </select><br>
         <div id="divAma"></div>
+        <div id="divDru"></div>
         <div id="divPal"></div>
         <select id="shield" name="shield">
             <option disabled selected>---SELECT A SHIELD---</option>
@@ -111,6 +112,7 @@ $character = $_POST['character'];
         $shael4 = $_POST['shael4'];
         $items = $_POST['other-items'];
         $weap1h = $_POST['1hweap'];
+        $form = $_POST['form'];
         $rate = 0;
         if ($shael1) {
 	        $rate += 20;
@@ -156,7 +158,7 @@ $character = $_POST['character'];
                 if ($weap1h) {
 	                echo '<h3>Amazon</h3>';
 	                echo '<table>';
-                    echo '<caption>1_H Swinging Weapon</caption>';
+                    echo '<caption>1_H swinging weapon</caption>';
 	                echo '<thead>';
 	                echo '<tr>';
 	                echo '<th>Faster Block Rate</th>';
@@ -397,13 +399,228 @@ $character = $_POST['character'];
 			        echo "Required Faster Block Rate for the next breakpoint: " . (42 - $rate) . "%";
                 } else if ($rate < 86) {
                     echo "Faster Block Rate: $rate%<br>";
-                    echo "Breakpoint: 4";
+                    echo "Breakpoint: 4<br>";
                     echo "Required Faster Block rate for the next breakpoint: " . (86 - $rate) . "%";
 		        } else {
 			        echo "Faster Block Rate: $rate%<br>";
 			        echo "Breakpoint: 3<br>";
 			        echo "Further Faster Block Rate unnecessary.";
 		        }
+            } else if ($character === 'dru') {
+                if ($form === 'human') {
+	                echo '<h3>Druid</h3>';
+	                echo '<table>';
+                    echo '<caption>Human form</caption>';
+	                echo '<thead>';
+	                echo '<tr>';
+	                echo '<th>Faster Block Rate</th>';
+	                echo '<th>Block Frames</th>';
+	                echo '</tr>';
+	                echo '</thead>';
+	                echo '<tbody>';
+	                echo '<tr>';
+	                echo '<td>0</td>';
+	                echo '<td>11</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>6</td>';
+	                echo '<td>10</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>13</td>';
+	                echo '<td>9</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>20</td>';
+	                echo '<td>8</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>32</td>';
+	                echo '<td>7</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>52</td>';
+	                echo '<td>6</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>86</td>';
+	                echo '<td>5</td>';
+	                echo '</tr>';
+	                echo '</tbody>';
+	                echo '</table>';
+
+	                if ($rate < 6) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 11<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (6 - $rate) . "%";
+	                } else if ($rate < 13) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 10<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (13 - $rate) . "%";
+	                } else if ($rate < 20) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 9<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (20 - $rate) . "%";
+	                } else if ($rate < 32) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 8<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (32 - $rate) . "%";
+	                } else if ($rate < 52) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 7<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (52 - $rate) . "%";
+	                } else if ($rate < 86) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 6<br>";
+		                echo "Required Faster Block rate for the next breakpoint: " . (86 - $rate) . "%";
+	                } else {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 5<br>";
+		                echo "Further Faster Block Rate unnecessary.";
+	                }
+                } else if ($form === 'werewolf') {
+	                echo '<h3>Druid</h3>';
+	                echo '<table>';
+                    echo '<caption>Werewolf form</caption>';
+	                echo '<thead>';
+	                echo '<tr>';
+	                echo '<th>Faster Block Rate</th>';
+	                echo '<th>Block Frames</th>';
+	                echo '</tr>';
+	                echo '</thead>';
+	                echo '<tbody>';
+	                echo '<tr>';
+	                echo '<td>0</td>';
+	                echo '<td>9</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>7</td>';
+	                echo '<td>8</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>15</td>';
+	                echo '<td>7</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>27</td>';
+	                echo '<td>6</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>48</td>';
+	                echo '<td>5</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>86</td>';
+	                echo '<td>4</td>';
+	                echo '</tr>';
+	                echo '</tbody>';
+	                echo '</table>';
+
+	                if ($rate < 7) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 9<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (7 - $rate) . "%";
+	                } else if ($rate < 15) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 8<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (15 - $rate) . "%";
+	                } else if ($rate < 27) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 7<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (27 - $rate) . "%";
+	                } else if ($rate < 48) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 6<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (48 - $rate) . "%";
+	                } else if ($rate < 86) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 5<br>";
+		                echo "Required Faster Block rate for the next breakpoint: " . (86 - $rate) . "%";
+	                } else {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 4<br>";
+		                echo "Further Faster Block Rate unnecessary.";
+	                }
+                } else {
+	                echo '<h3>Druid</h3>';
+	                echo '<table>';
+                    echo '<caption>Werebear form</caption>';
+	                echo '<thead>';
+	                echo '<tr>';
+	                echo '<th>Faster Block Rate</th>';
+	                echo '<th>Block Frames</th>';
+	                echo '</tr>';
+	                echo '</thead>';
+	                echo '<tbody>';
+	                echo '<tr>';
+	                echo '<td>0</td>';
+	                echo '<td>12</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>5</td>';
+	                echo '<td>11</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>10</td>';
+	                echo '<td>10</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>16</td>';
+	                echo '<td>9</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>27</td>';
+	                echo '<td>8</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>40</td>';
+	                echo '<td>7</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>65</td>';
+	                echo '<td>6</td>';
+	                echo '</tr>';
+	                echo '<tr>';
+	                echo '<td>109</td>';
+	                echo '<td>5</td>';
+	                echo '</tr>';
+	                echo '</tbody>';
+	                echo '</table>';
+
+	                if ($rate < 5) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 12<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (5 - $rate) . "%";
+	                } else if ($rate < 10) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 11<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (10 - $rate) . "%";
+	                } else if ($rate < 16) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 10<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (16 - $rate) . "%";
+	                } else if ($rate < 27) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 9<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (27 - $rate) . "%";
+	                } else if ($rate < 40) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 8<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (40 - $rate) . "%";
+	                } else if ($rate < 65) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 7<br>";
+		                echo "Required Faster Block Rate for the next breakpoint: " . (65 - $rate) . "%";
+	                } else if ($rate < 109) {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 6<br>";
+		                echo "Required Faster Block rate for the next breakpoint: " . (109 - $rate) . "%";
+	                } else {
+		                echo "Faster Block Rate: $rate%<br>";
+		                echo "Breakpoint: 5<br>";
+		                echo "Further Faster Block Rate unnecessary.";
+	                }
+                }
             } else if ($character === 'sor') {
 		        echo '<h3>Sorceress</h3>';
 		        echo '<table>';
@@ -459,7 +676,7 @@ $character = $_POST['character'];
                     echo "Required Faster Block Rate for the next breakpoint: " . (48 - $rate) . "%";
                 } else if ($rate < 86) {
                     echo "Faster Block Rate: $rate%<br>";
-                    echo "Breakpoint: 5";
+                    echo "Breakpoint: 5<br>";
                     echo "Required Faster Block rate for the next breakpoint: " . (86 - $rate) . "%";
 		        } else {
 			        echo "Faster Block Rate: $rate%<br>";
@@ -467,7 +684,7 @@ $character = $_POST['character'];
 			        echo "Further Faster Block Rate unnecessary.";
 		        }
             }
-        } else if ($character !== 'pal') {
+        } else if ($character === 'nec') {
 	        echo '<h3>Necromancer</h3>';
 	        echo '<table>';
 	        echo '<thead>';
@@ -548,18 +765,18 @@ $character = $_POST['character'];
 		        echo "Required Faster Block Rate for the next breakpoint: " . (32 - $rate) . "%";
                 } else if ($rate < 52) {
 		        echo "Faster Block Rate: $rate%<br>";
-		        echo "Breakpoint: 7";
+		        echo "Breakpoint: 7<br>";
 		        echo "Required Faster Block Rate for the next breakpoint: " . (52 - $rate) . "%";
             } else if ($rate < 86) {
                 echo "Faster Block Rate: $rate%<br>";
-                echo "Breakpoint: 6";
+                echo "Breakpoint: 6<br>";
                 echo "Required Faster Block Rate for the next breakpoint: " . (86 - $rate) . "%";
 	        } else {
 		        echo "Faster Block Rate: $rate%<br>";
 		        echo "Breakpoint: 5<br>";
 		        echo "Further Faster Block Rate unnecessary.";
 	        }
-        } else if ($character !== 'nec') {
+        } else if ($character === 'pal') {
 	        echo '<h3>Paladin</h3>';
 
 	        if ($shield === 'stormchaser-shield') {
