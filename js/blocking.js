@@ -17,8 +17,10 @@ $(document).ready(function() {
         }
         if ($(this).val() === "ama") {
             htmlAma = "<label>Type of Weapon (Amazon Only)<span class='required'>*</span></label><br>";
-            htmlAma += "<input type='checkbox' id='1hweap' name='1hweap' required>";
-            htmlAma += "<label for='1hweap'>1-H Swinging Weapon (Axe, Club, Mace, Scepter, Sword, Throwing Axe, or Wand)</label><br>";
+            htmlAma += "<input type='radio' id='weap1' name='weap' required>";
+            htmlAma += "<label for='weap1'>1-H Swinging Weapon (Axe, Club, Mace, Scepter, Sword, Throwing Axe, or Wand)</label><br>";
+            htmlAma += "<input type='radio' id='weap2' name='weap'>";
+            htmlAma += "<label for='weap2'>Any other weapon</label><br>";
             $("#divAma").html(htmlAma);
         } else {
             $("#divAma").html("");

@@ -108,7 +108,7 @@
         $shael3 = filter_input(INPUT_POST, 'shael3', FILTER_SANITIZE_STRING);
         $shael4 = filter_input(INPUT_POST, 'shael4', FILTER_SANITIZE_STRING);
         $items = filter_input(INPUT_POST, 'other-items', FILTER_SANITIZE_STRING);
-        $weap1h = filter_input(INPUT_POST, '1hweap', FILTER_SANITIZE_STRING);
+        $weap = filter_input(INPUT_POST, 'weap', FILTER_SANITIZE_STRING);
         $form = filter_input(INPUT_POST, 'form', FILTER_SANITIZE_STRING);
         $rate = 0;
         if ($shael1) {
@@ -152,7 +152,7 @@
 		        $rate += 50;
 	        }
             if ($character === 'ama') {
-                if ($weap1h) {
+                if ($weap) {
 	                echo '<h3>Amazon</h3>';
 	                echo '<table>';
                     echo '<caption>1_H swinging weapon</caption>';
