@@ -1,6 +1,3 @@
-<?php
-$character = $_POST['character'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,16 +100,16 @@ $character = $_POST['character'];
     </form>
     <div id="calc">
         <?php
-        $character = $_POST['character'];
-        $holy_shield = $_POST['holy-shield'];
-        $shield = $_POST['shield'];
-        $shael1 = $_POST['shael1'];
-        $shael2 = $_POST['shael2'];
-        $shael3 = $_POST['shael3'];
-        $shael4 = $_POST['shael4'];
-        $items = $_POST['other-items'];
-        $weap1h = $_POST['1hweap'];
-        $form = $_POST['form'];
+        $character = filter_input(INPUT_POST, 'character', FILTER_SANITIZE_STRING);
+        $holy_shield = filter_input(INPUT_POST, 'holy-shield', FILTER_SANITIZE_STRING);
+        $shield = filter_input(INPUT_POST, 'shield', FILTER_SANITIZE_STRING);
+        $shael1 = filter_input(INPUT_POST, 'shael1', FILTER_SANITIZE_STRING);
+        $shael2 = filter_input(INPUT_POST, 'shael2', FILTER_SANITIZE_STRING);
+        $shael3 = filter_input(INPUT_POST, 'shael3', FILTER_SANITIZE_STRING);
+        $shael4 = filter_input(INPUT_POST, 'shael4', FILTER_SANITIZE_STRING);
+        $items = filter_input(INPUT_POST, 'other-items', FILTER_SANITIZE_STRING);
+        $weap1h = filter_input(INPUT_POST, '1hweap', FILTER_SANITIZE_STRING);
+        $form = filter_input(INPUT_POST, 'form', FILTER_SANITIZE_STRING);
         $rate = 0;
         if ($shael1) {
 	        $rate += 20;
