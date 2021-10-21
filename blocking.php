@@ -253,7 +253,7 @@
 	                } else {
 		                echo "Faster Block Rate: $rate%<br>";
 		                echo "Breakpoint: 7<br>";
-		                echo "Further Faster Block Rate unnecessary.";
+		                echo "Further FBR unnecessary.";
 	                }
                 } else {
 	                echo '<h3>Amazon</h3>';
@@ -300,7 +300,7 @@
 	                } else {
 		                echo "Faster Block Rate: $rate%<br>";
 		                echo "Breakpoint: 2<br>";
-		                echo "Further Faster Block Rate unnecessary.";
+		                echo "Further FBR unnecessary.";
 	                }
                 }
             } else if ($character === 'ass') {
@@ -347,7 +347,7 @@
 		        } else {
 			        echo "Faster Block Rate: $rate%<br>";
 			        echo "Breakpoint: 2<br>";
-			        echo "Further Faster Block Rate unnecessary.";
+			        echo "Further FBR unnecessary.";
 		        }
 	        } else if ($character === 'bar') {
 		        echo '<h3>Barbarian</h3>';
@@ -401,7 +401,7 @@
 		        } else {
 			        echo "Faster Block Rate: $rate%<br>";
 			        echo "Breakpoint: 3<br>";
-			        echo "Further Faster Block Rate unnecessary.";
+			        echo "Further FBR unnecessary.";
 		        }
             } else if ($character === 'dru') {
                 if ($form === 'human') {
@@ -473,7 +473,7 @@
 	                } else {
 		                echo "Faster Block Rate: $rate%<br>";
 		                echo "Breakpoint: 5<br>";
-		                echo "Further Faster Block Rate unnecessary.";
+		                echo "Further FBR unnecessary.";
 	                }
                 } else if ($form === 'werewolf') {
 	                echo '<h3>Druid</h3>';
@@ -536,7 +536,7 @@
 	                } else {
 		                echo "Faster Block Rate: $rate%<br>";
 		                echo "Breakpoint: 4<br>";
-		                echo "Further Faster Block Rate unnecessary.";
+		                echo "Further FBR unnecessary.";
 	                }
                 } else {
 	                echo '<h3>Druid</h3>';
@@ -615,7 +615,7 @@
 	                } else {
 		                echo "Faster Block Rate: $rate%<br>";
 		                echo "Breakpoint: 5<br>";
-		                echo "Further Faster Block Rate unnecessary.";
+		                echo "Further FBR unnecessary.";
 	                }
                 }
             } else if ($character === 'sor') {
@@ -678,7 +678,7 @@
 		        } else {
 			        echo "Faster Block Rate: $rate%<br>";
 			        echo "Breakpoint: 4<br>";
-			        echo "Further Faster Block Rate unnecessary.";
+			        echo "Further FBR unnecessary.";
 		        }
             }
         } else if ($character === 'nec') {
@@ -771,7 +771,7 @@
 	        } else {
 		        echo "Faster Block Rate: $rate%<br>";
 		        echo "Breakpoint: 5<br>";
-		        echo "Further Faster Block Rate unnecessary.";
+		        echo "Further FBR unnecessary.";
 	        }
         } else if ($character === 'pal') {
 	        echo '<h3>Paladin</h3>';
@@ -845,7 +845,7 @@
                 } else {
 		            echo "Faster Block Rate: $rate%<br>";
 		            echo "Breakpoint: 2<br>";
-		            echo "Further Faster Block Rate unnecessary.";
+		            echo "Further FBR unnecessary.";
 	            }
             } else {
 	            echo '<table>';
@@ -874,7 +874,7 @@
                 } else {
 		            echo "Faster Block Rate: $rate%<br>";
 		            echo "Breakpoint: 1<br>";
-		            echo "Further Faster Block Rate unnecessary.";
+		            echo "Further FBR unnecessary.";
 	            }
             }
         }
