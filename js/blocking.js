@@ -20,18 +20,19 @@ $(document).ready(function() {
             htmlAma += "<input type='radio' id='weap1' name='weap' value='weap1' required>";
             htmlAma += "<label for='weap1'>1-H Swinging Weapon (Axe, Club, Mace, Scepter, Sword, Throwing Axe, or Wand)</label><br>";
             htmlAma += "<input type='radio' id='weap2' name='weap' value='weap2'>";
-            htmlAma += "<label for='weap2'>Any other weapon</label><br>";
+            htmlAma += "<label for='weap2'>Any other weapon</label>";
             $("#divAma").html(htmlAma);
         } else {
             $("#divAma").html("");
         }
         if ($(this).val() === 'dru') {
-            htmlDru = "<label for='form'>Form (Druid Only)<span class='required'>*</span></label>";
-            htmlDru += "<select id='form' name='form' required>";
-            htmlDru += "<option disabled selected>---SELECT DRUID FORM---</option>";
-            htmlDru += "<option value='human'>Human</option>";
-            htmlDru += "<option value='werewolf'>Werewolf</option>";
-            htmlDru += "<option value='werebear'>Werebear</option>";
+            htmlDru = "<label>Form (Druid Only)<span class='required'>*</span></label><br>";
+            htmlDru += "<input type='radio' id='human' name='form' value='human' required>"
+            htmlDru += "<label for='human'>Human</label><br>";
+            htmlDru += "<input type='radio' id='werewolf' name='form' value='werewolf'>";
+            htmlDru += "<label for='werewolf'>Werewolf</label><br>";
+            htmlDru += "<input type='radio' id='werebear' name='form' value='werebear'>";
+            htmlDru += "<label for='werebear'>Werebear</label>";
             $("#divDru").html(htmlDru);
         } else {
             $("#divDru").html("");
@@ -77,8 +78,6 @@ $(document).ready(function() {
             alert("Please select a character.");
         } else if ($("#shield").find(":selected").prop("disabled")) {
             alert ("Please select a shield.");
-        } else if($("#form").find(":selected").prop("disabled")) {
-            alert ("Please select Druid form.");
         }
     });
 });
