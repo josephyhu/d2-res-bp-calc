@@ -152,10 +152,10 @@
 		        $rate += 50;
 	        }
             if ($character === 'ama') {
-                if ($weap) {
+                if ($weap === 'weap1') {
 	                echo '<h3>Amazon</h3>';
 	                echo '<table>';
-                    echo '<caption>1_H swinging weapon</caption>';
+                    echo '<caption>1-H swinging weapon</caption>';
 	                echo '<thead>';
 	                echo '<tr>';
 	                echo '<th>Faster Block Rate</th>';
