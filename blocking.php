@@ -39,35 +39,48 @@ $character = $_POST['character'];
             <option value="sor">Sorceress</option>
         </select><br>
         <div id="divAma"></div>
-        <input type="checkbox" id="holy-shield" name="holy-shield">
-        <label for="holy-shield">Holy Shield (Paladin Only)</label><br>
-        <label for="shield">Shield<span class="required">*</span></label>
+        <div id="divPal"></div>
         <select id="shield" name="shield">
             <option disabled selected>---SELECT A SHIELD---</option>
-            <option value="shield-of-blocking">Magic/Rare/Crafted Shield of Blocking</option>
-            <option value="shield-of-deflecting">Magic/Rare/Crafted Shield of Deflecting</option>
-            <option value="griswolds-honor-shield">Griswold's Honor Vortex Shield (Paladin Only)</option>
-            <option value="taebaeks-glory-shield">Taebaek's Glory Ward</option>
-            <option value="whitstans-guard-shield">Whitstan's Guard Round Shield</option>
-            <option value="homunculus-shield">Homunculus Hierophant Trophy (Necromancer Only)</option>
-            <option value="alma-negra-shield">Alma Negra Sacred Rondache (Paladin Only)</option>
-            <option value="hoz-shield">Herald of Zakarum Gilded Shield (Paladin Only)</option>
-            <option value="pelta-lunata-shield">Pelta Lunata Buckler</option>
-            <option value="steelclash-shield">Steelclash Kite Shield</option>
-            <option value="visceratuant-shield">Visceratuant Defender</option>
-            <option value="mosers-shield">Moser's Blessed Circle Round Shield</option>
-            <option value="stormchaser-shield">Stormchaser Scutum</option>
-            <option value="radaments-sphere-shield">Radament's Sphere Ancient Shield</option>
-            <option value="blackoak-shield">Blackoak Shield Luna</option>
-            <option value="stormshield-shield">Stormshield Monarch</option>
-            <option value="spirit-ward-shield">Spirit Ward Ward</option>
-            <option value="rhyme-shield">Rhyme Shield</option>
-            <option value="exile-shield">Exile Shield (Paladin Only)</option>
-            <option value="sanctuary-shield">Sanctuary Shield</option>
-            <option value="splendor-shield">Splendor Shield</option>
+            <option vaiue="1-socket-normal-shields" class="1-socket">1 Socket Normal Shields</option>
+            <option value="2-socket-normal shields" class="2-socket">2 Socket Normal Shields</option>
+            <option value="3-socket-normal-shields" class="3-socket">3 Socket Normal Shields</option>
+            <option value="4-socket-normal-shields" class="4-socket">4 Socket Normal Shields</option>
+            <option value="necromancer-shields" class="2-socket">Necromancer Shields (Necromacer Only)</option>
+            <option value="paladin-shields" class="4-socket">Paladin Shields (Paladin Only)</option>
+            <option value="magic-shield-of-blocking" class="4-socket">Magic Shield of Blocking</option>
+            <option value="magic-shield-of-deflecting" class="4-socket">Magic Shield of Deflecting</option>
+            <option value="socketed-magic-shield" class="4-socket">Socketed Magic Shield</option>
+            <option value="rare-shield-of-blocking" class="2-socket">Rare Shield of Blocking</option>
+            <option value="rare-shield-of-deflecting" class="2-socket">Rare Shield of Deflecting</option>
+            <option value="socketed-rare-shield" class="2-socket">Socketed Rare Shield</option>
+            <option value="crafted-shield-of-blocking" class="1-socket">Crafted Shield of Blocking</option>
+            <option value="crafted-shield-of-deflecting" class="1-socket">Crafted Shield of Deflecting</option>
+            <option value="socketed-crafted-shield" class="1-socket">Socketed Crafted Shield</option>
+            <option value="griswolds-honor-shield" class="1-socket">Griswold's Honor Vortex Shield (Paladin Only)</option>
+            <option value="taebaeks-glory-shield" class="1-socket">Taebaek's Glory Ward</option>
+            <option value="whitstans-guard-shield" class="1-socket">Whitstan's Guard Round Shield</option>
+            <option value="socketed-set-shield" class="1-socket">Socketed Set Shield</option>
+            <option value="homunculus-shield" class="1-socket">Homunculus Hierophant Trophy (Necromancer Only)</option>
+            <option value="alma-negra-shield" class="1-socket">Alma Negra Sacred Rondache (Paladin Only)</option>
+            <option value="hoz-shield" class="1-socket">Herald of Zakarum Gilded Shield (Paladin Only)</option>
+            <option value="pelta-lunata-shield" class="1-socket">Pelta Lunata Buckler</option>
+            <option value="steelclash-shield" class="1-socket">Steelclash Kite Shield</option>
+            <option value="visceratuant-shield" class="1-socket">Visceratuant Defender</option>
+            <option value="mosers-shield" class="2-socket">Moser's Blessed Circle Round Shield</option>
+            <option value="stormchaser-shield" class="1-socket">Stormchaser Scutum</option>
+            <option value="radaments-sphere-shield" class="1-socket">Radament's Sphere Ancient Shield</option>
+            <option value="blackoak-shield" class="1-socket">Blackoak Shield Luna</option>
+            <option value="stormshield-shield" class="1-socket">Stormshield Monarch</option>
+            <option value="head-hunters-glory-shield" class="3-socket">Head Hunter's Glory Troll Nest</option>
+            <option value="spirit-ward-shield" class="1-socket">Spirit Ward Ward</option>
+            <option value="socketed-unique-shield" class="1-socket">Socketed Unique Shield</option>
+            <option value="rhyme-shield" class="runeword">Rhyme Shield</option>
+            <option value="exile-shield" class="runeword">Exile Shield (Paladin Only)</option>
+            <option value="sanctuary-shield" class="runeword">Sanctuary Shield</option>
+            <option value="splendor-shield" class="runeword">Splendor Shield</option>
         </select><br>
-        <input type="checkbox" id="shael" name="shael">
-        <label for="shael">Socket Shael Rune to shield (Non-runeword shields only)</label><br>
+        <div id="htmlShael"></div>
         <label for="other-items">Other Items</label>
         <select id="other-items" name="other-items">
             <option selected disabled>---SELECT OTHER ITEMS---</option>
@@ -80,11 +93,23 @@ $character = $_POST['character'];
         $character = $_POST['character'];
         $holy_shield = $_POST['holy-shield'];
         $shield = $_POST['shield'];
-        $shael = $_POST['shael'];
+        $shael1 = $_POST['shael1'];
+        $shael2 = $_POST['shael2'];
+        $shael3 = $_POST['shael3'];
+        $shael4 = $_POST['shael4'];
         $items = $_POST['other-items'];
         $weap1h = $_POST['1hweap'];
         $rate = 0;
-        if ($shael) {
+        if ($shael1) {
+	        $rate += 20;
+        }
+        if ($shael2) {
+            $rate += 20;
+        }
+        if ($shael3) {
+	        $rate += 20;
+        }
+        if ($shael4) {
 	        $rate += 20;
         }
         if ($items === 'guardian-angel-armor') {
