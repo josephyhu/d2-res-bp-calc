@@ -42,18 +42,30 @@ $character = $_POST['character'];
         <div id="divPal"></div>
         <select id="shield" name="shield">
             <option disabled selected>---SELECT A SHIELD---</option>
-            <option vaiue="1-socket-normal-shields" class="1-socket">1 Socket Normal Shields</option>
-            <option value="2-socket-normal shields" class="2-socket">2 Socket Normal Shields</option>
-            <option value="3-socket-normal-shields" class="3-socket">3 Socket Normal Shields</option>
-            <option value="4-socket-normal-shields" class="4-socket">4 Socket Normal Shields</option>
+            <option vaiue="1-socket-normal-shield" class="1-socket">1 Socket Normal Shield</option>
+            <option value="2-socket-normal shield" class="2-socket">2 Socket Normal Shield</option>
+            <option value="3-socket-normal-shield" class="3-socket">3 Socket Normal Shield</option>
+            <option value="4-socket-normal-shield" class="4-socket">4 Socket Normal Shield</option>
             <option value="necromancer-shields" class="2-socket">Necromancer Shields (Necromacer Only)</option>
             <option value="paladin-shields" class="4-socket">Paladin Shields (Paladin Only)</option>
-            <option value="magic-shield-of-blocking" class="4-socket">Magic Shield of Blocking</option>
-            <option value="magic-shield-of-deflecting" class="4-socket">Magic Shield of Deflecting</option>
-            <option value="socketed-magic-shield" class="4-socket">Socketed Magic Shield</option>
-            <option value="rare-shield-of-blocking" class="2-socket">Rare Shield of Blocking</option>
-            <option value="rare-shield-of-deflecting" class="2-socket">Rare Shield of Deflecting</option>
-            <option value="socketed-rare-shield" class="2-socket">Socketed Rare Shield</option>
+            <option value="1-socket-magic-shield-of-blocking" class="1-socket">1 Socket Magic Shield of Blocking</option>
+            <option value="1-socket-magic-shield-of-deflecting" class="1-socket">1 Socket Magic Shield of Deflecting</option>
+            <option value="1-socket-magic-shield" class="1-socket">1 Socket Magic Shield</option>
+            <option value="2-socket-magic-shield-of-blocking" class="2-socket">2 Socket Magic Shield of Blocking</option>
+            <option value="2-socket-magic-shield-of-deflecting" class="2-socket">2 Socket Magic Shield of Deflecting</option>
+            <option value="2-socket-magic-shield" class="2-socket">2 Socket Magic Shield</option>
+            <option value="3-socket-magic-shield-of-blocking" class="3-socket">3 Socket Magic Shield of Blocking</option>
+            <option value="3-socket-magic-shield-of-deflecting" class="3-socket">3 Socket Magic Shield of Deflecting</option>
+            <option value="3-socket-magic-shield" class="3-socket">3 Socket Magic Shield</option>
+            <option value="4-socket-magic-shield-of-blocking" class="4-socket">4 Socket Magic Shield of Blocking</option>
+            <option value="4-socket-magic-shield-of-deflecting" class="4-socket">4 Socket Magic Shield of Deflecting</option>
+            <option value="4-socket-magic-shield" class="4-socket">4 Socket Magic Shield</option>
+            <option value="1-socket-rare-shield-of-blocking" class="1-socket">1 Socket Rare Shield of Blocking</option>
+            <option value="1-socket-rare-shield-of-deflecting" class="1-socket">1 Socket Rare Shield of Deflecting</option>
+            <option value="1-socket-rare-shield" class="1-socket">1 Socket Rare Shield</option>
+            <option value="2-socket-rare-shield-of-blocking" class="2-socket">2 Socket Rare Shield of Blocking</option>
+            <option value="2-socket-rare-shield-of-deflecting" class="2-socket">2 Socket Rare Shield of Deflecting</option>
+            <option value="2-socket-rare-shield" class="2-socket">2 Socket Rare Shield</option>
             <option value="crafted-shield-of-blocking" class="1-socket">Crafted Shield of Blocking</option>
             <option value="crafted-shield-of-deflecting" class="1-socket">Crafted Shield of Deflecting</option>
             <option value="socketed-crafted-shield" class="1-socket">Socketed Crafted Shield</option>
@@ -118,15 +130,19 @@ $character = $_POST['character'];
         if ($character !== 'nec' && $character !== 'pal') {
 	        if ($shield === 'stormchaser-shield') {
 		        $rate += 10;
-	        } else if ($shield === 'shield-of-blocking') {
+	        } else if ($shield === '1-socket-magic-shield-of-blocking' || $shield === '1-socket-rare-shield-of-blocking' ||
+                       $shield === '2-socket-magic-shield-of-blocking' || $shield === '2-socket-rare-shield-of-blocking' ||
+                       $shield === '3-socket-magic-shield-of-blocking' || $shield === '4-socket-magic-shield-of-blocking') {
 		        $rate += 15;
 	        } else if ($shield === 'steelclash-shield' || $shield === 'radaments-sphere-shield' ||
 	                   $shield === 'sanctuary-shield' || $shield === 'splendor-shield') {
 		        $rate += 20;
 	        } else if ($shield === 'spirit-ward-shield') {
 		        $rate += 25;
-	        } else if ($shield === 'shield-of-deflecting' || $shield === 'taebaeks-glory-shield' ||
-	                   $shield === 'visceratuant-shield' || $shield === 'mosers-shield') {
+	        } else if ($shield === '1-socket-magic-shield-of-deflecting' || $shield === '1-socket-rare-shield-of-deflecting' ||
+                       $shield === '2-socket-magic-shield-of-deflecting' || $shield === '2-socket-rare-shield-of-deflecting' ||
+                       $shield === '3-socket-magic-shield-of-deflecting' || $shield === '4-socket-magic-shield-of-deflecting' ||
+                       $shield === 'taebaeks-glory-shield' || $shield === 'visceratuant-shield' || $shield === 'mosers-shield') {
 		        $rate += 30;
 	        } else if ($shield === 'stormshield-shield') {
 		        $rate += 35;
