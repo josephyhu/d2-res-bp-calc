@@ -48,19 +48,19 @@ $(document).ready(function() {
     $("#shield").on("change", function() {
         if ($(this).find(":selected").hasClass("1-socket")) {
             htmlShael = "<input type='checkbox' id='shael1' name='shael1'>";
-            htmlShael += "<label for='shael1'>Socket a Shael Rune to shield</label><br>";
+            htmlShael += "<label for='shael1'>Socket a Shael Rune to shield</label>";
         } else if ($(this).find(":selected").hasClass("2-socket")) {
             htmlShael = "<input type='checkbox' id='shael1' name='shael1'>";
             htmlShael += "<label for='shael1'>Socket a Shael Rune to shield</label><br>";
             htmlShael += "<input type='checkbox' id='shael2' name='shael2'>";
-            htmlShael += "<label for='shael2'>Socket another Shael Rune to shield</label><br>";
+            htmlShael += "<label for='shael2'>Socket another Shael Rune to shield</label>";
         } else if ($(this).find(":selected").hasClass("3-socket")) {
             htmlShael = "<input type='checkbox' id='shael1' name='shael1'>";
             htmlShael += "<label for='shael1'>Socket a Shael Rune to shield</label><br>";
             htmlShael += "<input type='checkbox' id='shael2' name='shael2'>";
             htmlShael += "<label for='shael2'>Socket another Shael Rune to shield</label><br>";
             htmlShael += "<input type='checkbox' id='shael3' name='shael3'>";
-            htmlShael += "<label for='shael3'>Socket a 3rd Shael Rune to shield</label><br>";
+            htmlShael += "<label for='shael3'>Socket a 3rd Shael Rune to shield</label>";
         } else if($(this).find(":selected").hasClass("4-socket")) {
             htmlShael = "<input type='checkbox' id='shael1' name='shael1'>";
             htmlShael += "<label for='shael1'>Socket a Shael Rune to shield</label><br>";
@@ -69,7 +69,7 @@ $(document).ready(function() {
             htmlShael += "<input type='checkbox' id='shael3' name='shael3'>";
             htmlShael += "<label for='shael3'>Socket a 3rd Shael Rune to shield</label><br>";
             htmlShael += "<input type='checkbox' id='shael4' name='shael4'>";
-            htmlShael += "<label for='shael4'>Socket a 4th Shael Rune to shield</label><br>";
+            htmlShael += "<label for='shael4'>Socket a 4th Shael Rune to shield</label>";
         }
         $("#htmlShael").html(htmlShael);
     });
