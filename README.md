@@ -1,5 +1,5 @@
 # Diablo II: Resurrected Breakpoints Calculator
 
-* Blocking
-* Casting
-* Hit Recovery
+- [x] Blocking
+- [ ] Casting
+- [ ] Hit Recovery
