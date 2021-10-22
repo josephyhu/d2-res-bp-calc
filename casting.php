@@ -187,7 +187,7 @@
             </optgroup>
         </select><br>
         <button type="submit" id="btn">Calculate</button>
-        <button type="reset">Reset</button>
+        <button type="reset" id="reset">Reset</button>
     </form>
     <?php
     $character = $_POST['character'];

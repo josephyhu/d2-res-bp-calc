@@ -89,143 +89,125 @@ $(document).ready(function() {
             $("#armor").attr("disabled", "disabled");
             $("#shield").attr("disabled", "disabled");
             $("#weapon").attr("disabled", "disabled");
+        } else if ($(this).val() === 'tal-rashas-armor-and-amulet') {
+            $("#amulet").attr("disabled", "disabled");
+            $("#armor").attr("disabled", "disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#weapon").removeAttr("disabled");
+            $("#helm").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-armor-and-helm') {
+            $("#helm").attr("disabled", "disabled");
+            $("#armor").attr("disabled", "disabled");
+            $("#amulet").removeAttr("disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#weapon").removeAttr("disabled");
+            $("#belt").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-armor-and-belt') {
+            $("#belt").attr("disabled", "disabled");
+            $("#armor").attr("disabled", "disabled");
+            $("#amulet").removeAttr("disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#weapon").removeAttr("disabled");
+            $("#helm").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-armor-and-orb') {
+            $("#weapon").attr("disabled", "disabled");
+            $("#armor").attr("disabled", "disabled");
+            $("#amulet").removeAttr("disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#belt").removeAttr("disabled");
+            $("#helm").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-belt-amulet-and-helm') {
+            $("#helm").attr("disabled", "disabled");
+            $("#amulet").attr("disabled", "disabled");
+            $("#belt").attr("disabled", "disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#weapon").removeAttr("disabled");
+            $("#armor").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-belt-amulet-and-armor') {
+            $("#armor").attr("disabled", "disabled");
+            $("#amulet").attr("disabled", "disabled");
+            $("#belt").attr("disabled", "disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#weapon").removeAttr("disabled");
+            $("#helm").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-belt-amulet-and-orb') {
+            $("#weapon").attr("disabled", "disabled");
+            $("#amulet").attr("disabled", "disabled");
+            $("#belt").attr("disabled", "disabled");
+            $("#armor").removeAttr("disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#helm").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-belt-helm-and-armor') {
+            $("#helm").attr("disabled", "disabled");
+            $("#armor").attr("disabled", "disabled");
+            $("#belt").attr("disabled", "disabled");
+            $("#amulet").removeAttr("disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#weapon").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-belt-helm-and-orb') {
+            $("#helm").attr("disabled", "disabled");
+            $("#weapon").attr("disabled", "disabled");
+            $("#belt").attr("disabled", "disabled");
+            $("#amulet").removeAttr("disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#armor").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-belt-armor-and-orb') {
+            $("#armor").attr("disabled", "disabled");
+            $("#weapon").attr("disabled", "disabled");
+            $("#belt").attr("disabled", "disabled");
+            $("#amulet").removeAttr("disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#helm").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-amulet-helm-armor-and-belt') {
+            $("#helm").attr("disabled", "disabled");
+            $("#armor").attr("disabled", "disabled");
+            $("#amulet").attr("disabled", "disabled");
+            $("#belt").attr("disabled", "disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#weapon").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-amulet-helm-armor-and-orb') {
+            $("#helm").attr("disabled", "disabled");
+            $("#armor").attr("disabled", "disabled");
+            $("#amulet").attr("disabled", "disabled");
+            $("#weapon").attr("disabled", "disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#belt").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-amulet-helm-belt-and-orb') {
+            $("#helm").attr("disabled", "disabled");
+            $("#weapon").attr("disabled", "disabled");
+            $("#amulet").attr("disabled", "disabled");
+            $("#belt").attr("disabled", "disabled");
+            $("#armor").removeAttr("disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+        } else if ($(this).val() === 'tal-rashas-amulet-armor-belt-and-orb') {
+            $("#weapon").attr("disabled", "disabled");
+            $("#armor").attr("disabled", "disabled");
+            $("#amulet").attr("disabled", "disabled");
+            $("#belt").attr("disabled", "disabled");
+            $("#ring").removeAttr("disabled");
+            $("#shield").removeAttr("disabled");
+            $("#helm").removeAttr("disabled");
         } else {
             $("#amulet").removeAttr("disabled");
             $("#ring").removeAttr("disabled");
             $("#helm").removeAttr("disabled");
             $("#armor").removeAttr("disabled");
+            $("#belt").removeAttr("disabled");
             $("#shield").removeAttr("disabled");
             $("#weapon").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-armor-and-amulet') {
-            $("#amulet").attr("disabled", "disabled");
-            $("#armor").attr("disabled", "disabled");
-        } else
-        {
-            $("#amulet").removeAttr("disabled");
-            $("#armor").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-armor-and-helm') {
-            $("#helm").attr("disabled", "disabled");
-            $("#armor").attr("disabled", "disabled");
-        } else
-        {
-            $("#helm").removeAttr("disabled");
-            $("#armor").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-armor-and-belt') {
-            $("#belt").attr("disabled", "disabled");
-            $("#armor").attr("disabled", "disabled");
-        } else
-        {
-            $("#amulet").removeAttr("disabled");
-            $("#belt").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-armor-and-orb') {
-            $("#orb").attr("disabled", "disabled");
-            $("#armor").attr("disabled", "disabled");
-        } else
-        {
-            $("#amulet").removeAttr("disabled");
-            $("#orb").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-belt-amulet-and-helm') {
-            $("#helm").attr("disabled", "disabled");
-            $("#amulet").attr("disabled", "disabled");
-            $("#belt").attr("disabled", "disabled");
-        } else {
-            $("#helm").removeAttr("disabled");
-            $("#amulet").removeAttr("disabled");
-            $("#belt").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-belt-amulet-and-armor') {
-            $("#armor").attr("disabled", "disabled");
-            $("#amulet").attr("disabled", "disabled");
-            $("#belt").attr("disabled", "disabled");
-        } else {
-            $("#armor").removeAttr("disabled");
-            $("#amulet").removeAttr("disabled");
-            $("#belt").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-belt-amulet-and-orb') {
-            $("#orb").attr("disabled", "disabled");
-            $("#amulet").attr("disabled", "disabled");
-            $("#belt").attr("disabled", "disabled");
-        } else {
-            $("#orb").removeAttr("disabled");
-            $("#amulet").removeAttr("disabled");
-            $("#belt").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-belt-helm-and-armor') {
-            $("#helm").attr("disabled", "disabled");
-            $("#armor").attr("disabled", "disabled");
-            $("#belt").attr("disabled", "disabled");
-        } else {
-            $("#helm").removeAttr("disabled");
-            $("#armor").removeAttr("disabled");
-            $("#belt").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-belt-helm-and-orb') {
-            $("#helm").attr("disabled", "disabled");
-            $("#orb").attr("disabled", "disabled");
-            $("#belt").attr("disabled", "disabled");
-        } else {
-            $("#helm").removeAttr("disabled");
-            $("#orb").removeAttr("disabled");
-            $("#belt").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-belt-armor-and-orb') {
-            $("#armor").attr("disabled", "disabled");
-            $("#orb").attr("disabled", "disabled");
-            $("#belt").attr("disabled", "disabled");
-        } else {
-            $("#armor").removeAttr("disabled");
-            $("#orb").removeAttr("disabled");
-            $("#belt").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-amulet-helm-armor-and-belt') {
-            $("#helm").attr("disabled", "disabled");
-            $("#armor").attr("disabled", "disabled");
-            $("#amulet").attr("disabled", "disabled");
-            $("#belt").attr("disabled", "disabled");
-        } else {
-            $("#helm").removeAttr("disabled");
-            $("#armor").removeAttr("disabled");
-            $("#amulet").removeAttr("disabled");
-            $("#belt").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-amulet-helm-armor-and-orb') {
-            $("#helm").attr("disabled", "disabled");
-            $("#armor").attr("disabled", "disabled");
-            $("#amulet").attr("disabled", "disabled");
-            $("#orb").attr("disabled", "disabled");
-        } else {
-            $("#helm").removeAttr("disabled");
-            $("#armor").removeAttr("disabled");
-            $("#amulet").removeAttr("disabled");
-            $("#orb").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-amulet-helm-belt-and-orb') {
-            $("#helm").attr("disabled", "disabled");
-            $("#orb").attr("disabled", "disabled");
-            $("#amulet").attr("disabled", "disabled");
-            $("#belt").attr("disabled", "disabled");
-        } else {
-            $("#helm").removeAttr("disabled");
-            $("#orb").removeAttr("disabled");
-            $("#amulet").removeAttr("disabled");
-            $("#belt").removeAttr("disabled");
-        }
-        if ($(this).val() === 'tal-rashas-amulet-armor-and-belt-orb') {
-            $("#orb").attr("disabled", "disabled");
-            $("#armor").attr("disabled", "disabled");
-            $("#amulet").attr("disabled", "disabled");
-            $("#belt").attr("disabled", "disabled");
-        } else {
-            $("#orb").removeAttr("disabled");
-            $("#armor").removeAttr("disabled");
-            $("#amulet").removeAttr("disabled");
-            $("#belt").removeAttr("disabled");
         }
     });
     $("#shield").on("change", function() {
@@ -276,5 +258,14 @@ $(document).ready(function() {
         if ($("#character").find(":selected").prop("disabled")) {
             alert("Please select a character.");
         }
+    });
+    $("#reset").click(function() {
+        $("#amulet").removeAttr("disabled");
+        $("#ring").removeAttr("disabled");
+        $("#helm").removeAttr("disabled");
+        $("#armor").removeAttr("disabled");
+        $("#belt").removeAttr("disabled");
+        $("#shield").removeAttr("disabled");
+        $("#weapon").removeAttr("disabled");
     });
 });
