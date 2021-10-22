@@ -52,7 +52,6 @@
             <optgroup label="Set">
                 <option value="tal-rashas-amulet">Tal Rasha's Adjudication Amulet (4 Set Items)</option>
             </optgroup>
-            <option value="na">Not Applicable</option>
         </select><br>
         <label for="ring">Ring</label><br>
         <select id="ring" name="ring">
@@ -60,7 +59,6 @@
             <optgroup label="Magic/Rare">
                 <option value="ring-of-apprentice">Magic/Rare Ring of Apprentice</option>
             </optgroup>
-            <option value="na">Not Applicable</option>
         </select><br>
         <label for="helm">Helm</label><br>
         <select id="helm" name="helm">
@@ -72,7 +70,6 @@
             <optgroup label="Unique">
                 <option value="griffons-diadem">Griffon's Eye Diadem</option>
             </optgroup>
-            <option value="na">Not Applicable</option>
         </select><br>
         <label for="armor">Body Armor</label><br>
         <select id="armor" name="armor">
@@ -89,7 +86,6 @@
                 <option value="stealth-armor">Stealth Armor</option>
                 <option value="fortitude-armor">Fortitude Armor</option>
             </optgroup>
-            <option value="na">Not Applicable</option>
         </select><br>
         <label for="shield">Shield</label><br>
         <select id="shield" name="shield">
@@ -103,7 +99,6 @@
                 <option value="splendor-shield">Splendor Shield</option>
                 <option value="spirit-shield">Spirit Shield</option>
             </optgroup>
-            <option value="na">Not Applicable</option>
         </select><br>
         <label for="gloves">Gloves</label><br>
         <select id="gloves" name="gloves">
@@ -114,7 +109,6 @@
             <optgroup label="Unique">
                 <option value="magefist-gloves">Magefist Light Gauntlets</option>
             </optgroup>
-            <option value="na">Not Applicable</option>
         </select><br>
         <label for="belt">Belt</label><br>
         <select id="belt" name="belt">
@@ -128,7 +122,6 @@
             <optgroup label="Unique">
                 <option value="arachnid-mesh-belt">Arachnid Mesh Spiderweb Sash</option>
             </optgroup>
-            <option value="na">Not Applicable</option>
         </select><br>
         <label for="weapon">Weapon</label><br>
         <select id="weapon" name="weapon">
@@ -177,16 +170,15 @@
                 <option value="spirit-1h-sword">Spirit 1-H Sword</option>
                 <option value="spirit-2h-sword">Spirit 2-H Sword</option>
             </optgroup>
-            <option value="na">Not Applicable</option>
         </select><br>
         <label for="set">Complete Set</label><br>
         <select id="set" name="set">
             <option disabled selected>---SELECT A COMPLETE SET---</option>
             <option value="arcannas-tricks-set">Arcanna's Tricks Complete Set</option>
             <option value="cathans-traps-set">Cathan's Traps Complete Set</option>
-            <option value="na">Not Applicable</option>
         </select><br>
         <button type="submit" id="btn">Calculate</button>
+        <button type="reset">Reset</button>
     </form>
 </main>
 <script
