@@ -102,16 +102,15 @@
                 <option value="sanctuary-shield" class="runeword">Sanctuary Shield</option>
                 <option value="splendor-shield" class="runeword">Splendor Shield</option>
             </optgroup>
-            <option value="na">Not Applicable</option>
         </select><br>
         <div id="htmlShael"></div>
         <label for="other-items">Other Items</label><br>
         <select id="other-items" name="other-items">
             <option selected disabled>---SELECT OTHER ITEMS---</option>
             <option value="guardian-angel-armor">Guardian Angel Templar Coat</option>
-            <option value="na">Not Applicable</option>
         </select><br>
         <button type="submit" id="btn">Calculate</button>
+        <button type="reset" id="reset">Reset</button>
     </form>
     <div id="calc">
         <?php
