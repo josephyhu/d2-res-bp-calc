@@ -41,61 +41,75 @@
         <label for="shield">Shield<span class="required">*</span></label><br>
         <select id="shield" name="shield">
             <option disabled selected>---SELECT A SHIELD---</option>
-            <option value="1-socket-normal-shield" class="1-socket">1 Socket Normal Shield</option>
-            <option value="2-socket-normal shield" class="2-socket">2 Socket Normal Shield</option>
-            <option value="3-socket-normal-shield" class="3-socket">3 Socket Normal Shield</option>
-            <option value="4-socket-normal-shield" class="4-socket">4 Socket Normal Shield</option>
-            <option value="necromancer-shields" class="2-socket">Necromancer Shields (Necromacer Only)</option>
-            <option value="paladin-shields" class="4-socket">Paladin Shields (Paladin Only)</option>
-            <option value="1-socket-magic-shield-of-blocking" class="1-socket">1 Socket Magic Shield of Blocking</option>
-            <option value="1-socket-magic-shield-of-deflecting" class="1-socket">1 Socket Magic Shield of Deflecting</option>
-            <option value="1-socket-magic-shield" class="1-socket">1 Socket Magic Shield</option>
-            <option value="2-socket-magic-shield-of-blocking" class="2-socket">2 Socket Magic Shield of Blocking</option>
-            <option value="2-socket-magic-shield-of-deflecting" class="2-socket">2 Socket Magic Shield of Deflecting</option>
-            <option value="2-socket-magic-shield" class="2-socket">2 Socket Magic Shield</option>
-            <option value="3-socket-magic-shield-of-blocking" class="3-socket">3 Socket Magic Shield of Blocking</option>
-            <option value="3-socket-magic-shield-of-deflecting" class="3-socket">3 Socket Magic Shield of Deflecting</option>
-            <option value="3-socket-magic-shield" class="3-socket">3 Socket Magic Shield</option>
-            <option value="4-socket-magic-shield-of-blocking" class="4-socket">4 Socket Magic Shield of Blocking</option>
-            <option value="4-socket-magic-shield-of-deflecting" class="4-socket">4 Socket Magic Shield of Deflecting</option>
-            <option value="4-socket-magic-shield" class="4-socket">4 Socket Magic Shield</option>
-            <option value="1-socket-rare-shield-of-blocking" class="1-socket">1 Socket Rare Shield of Blocking</option>
-            <option value="1-socket-rare-shield-of-deflecting" class="1-socket">1 Socket Rare Shield of Deflecting</option>
-            <option value="1-socket-rare-shield" class="1-socket">1 Socket Rare Shield</option>
-            <option value="2-socket-rare-shield-of-blocking" class="2-socket">2 Socket Rare Shield of Blocking</option>
-            <option value="2-socket-rare-shield-of-deflecting" class="2-socket">2 Socket Rare Shield of Deflecting</option>
-            <option value="2-socket-rare-shield" class="2-socket">2 Socket Rare Shield</option>
-            <option value="crafted-shield-of-blocking" class="1-socket">Crafted Shield of Blocking</option>
-            <option value="crafted-shield-of-deflecting" class="1-socket">Crafted Shield of Deflecting</option>
-            <option value="socketed-crafted-shield" class="1-socket">Socketed Crafted Shield</option>
-            <option value="griswolds-honor-shield" class="1-socket">Griswold's Honor Vortex Shield (Paladin Only)</option>
-            <option value="taebaeks-glory-shield" class="1-socket">Taebaek's Glory Ward</option>
-            <option value="whitstans-guard-shield" class="1-socket">Whitstan's Guard Round Shield</option>
-            <option value="socketed-set-shield" class="1-socket">Socketed Set Shield</option>
-            <option value="homunculus-shield" class="1-socket">Homunculus Hierophant Trophy (Necromancer Only)</option>
-            <option value="alma-negra-shield" class="1-socket">Alma Negra Sacred Rondache (Paladin Only)</option>
-            <option value="hoz-shield" class="1-socket">Herald of Zakarum Gilded Shield (Paladin Only)</option>
-            <option value="pelta-lunata-shield" class="1-socket">Pelta Lunata Buckler</option>
-            <option value="steelclash-shield" class="1-socket">Steelclash Kite Shield</option>
-            <option value="visceratuant-shield" class="1-socket">Visceratuant Defender</option>
-            <option value="mosers-shield" class="2-socket">Moser's Blessed Circle Round Shield</option>
-            <option value="stormchaser-shield" class="1-socket">Stormchaser Scutum</option>
-            <option value="radaments-sphere-shield" class="1-socket">Radament's Sphere Ancient Shield</option>
-            <option value="blackoak-shield" class="1-socket">Blackoak Shield Luna</option>
-            <option value="stormshield-shield" class="1-socket">Stormshield Monarch</option>
-            <option value="head-hunters-glory-shield" class="3-socket">Head Hunter's Glory Troll Nest</option>
-            <option value="spirit-ward-shield" class="1-socket">Spirit Ward Ward</option>
-            <option value="socketed-unique-shield" class="1-socket">Socketed Unique Shield</option>
-            <option value="rhyme-shield" class="runeword">Rhyme Shield</option>
-            <option value="exile-shield" class="runeword">Exile Shield (Paladin Only)</option>
-            <option value="sanctuary-shield" class="runeword">Sanctuary Shield</option>
-            <option value="splendor-shield" class="runeword">Splendor Shield</option>
+            <optgroup label="Base">
+                <option value="1-socket-normal-shield" class="1-socket">1 Socket Normal Shield</option>
+                <option value="2-socket-normal shield" class="2-socket">2 Socket Normal Shield</option>
+                <option value="3-socket-normal-shield" class="3-socket">3 Socket Normal Shield</option>
+                <option value="4-socket-normal-shield" class="4-socket">4 Socket Normal Shield</option>
+                <option value="necromancer-shields" class="2-socket">Necromancer Shields (Necromacer Only)</option>
+                <option value="paladin-shields" class="4-socket">Paladin Shields (Paladin Only)</option>
+            </optgroup>
+            <optgroup label="Magic/Rare">
+                <option value="1-socket-magic-shield-of-blocking" class="1-socket">1 Socket Magic Shield of Blocking</option>
+                <option value="1-socket-magic-shield-of-deflecting" class="1-socket">1 Socket Magic Shield of Deflecting</option>
+                <option value="1-socket-magic-shield" class="1-socket">1 Socket Magic Shield</option>
+                <option value="2-socket-magic-shield-of-blocking" class="2-socket">2 Socket Magic Shield of Blocking</option>
+                <option value="2-socket-magic-shield-of-deflecting" class="2-socket">2 Socket Magic Shield of Deflecting</option>
+                <option value="2-socket-magic-shield" class="2-socket">2 Socket Magic Shield</option>
+                <option value="3-socket-magic-shield-of-blocking" class="3-socket">3 Socket Magic Shield of Blocking</option>
+                <option value="3-socket-magic-shield-of-deflecting" class="3-socket">3 Socket Magic Shield of Deflecting</option>
+                <option value="3-socket-magic-shield" class="3-socket">3 Socket Magic Shield</option>
+                <option value="4-socket-magic-shield-of-blocking" class="4-socket">4 Socket Magic Shield of Blocking</option>
+                <option value="4-socket-magic-shield-of-deflecting" class="4-socket">4 Socket Magic Shield of Deflecting</option>
+                <option value="4-socket-magic-shield" class="4-socket">4 Socket Magic Shield</option>
+                <option value="1-socket-rare-shield-of-blocking" class="1-socket">1 Socket Rare Shield of Blocking</option>
+                <option value="1-socket-rare-shield-of-deflecting" class="1-socket">1 Socket Rare Shield of Deflecting</option>
+                <option value="1-socket-rare-shield" class="1-socket">1 Socket Rare Shield</option>
+                <option value="2-socket-rare-shield-of-blocking" class="2-socket">2 Socket Rare Shield of Blocking</option>
+                <option value="2-socket-rare-shield-of-deflecting" class="2-socket">2 Socket Rare Shield of Deflecting</option>
+                <option value="2-socket-rare-shield" class="2-socket">2 Socket Rare Shield</option>
+            </optgroup>
+            <optgroup label="Crafted">
+                <option value="crafted-shield-of-blocking" class="1-socket">Crafted Shield of Blocking</option>
+                <option value="crafted-shield-of-deflecting" class="1-socket">Crafted Shield of Deflecting</option>
+                <option value="socketed-crafted-shield" class="1-socket">Socketed Crafted Shield</option>
+            </optgroup>
+            <optgroup label="Set">
+                <option value="griswolds-honor-shield" class="1-socket">Griswold's Honor Vortex Shield (Paladin Only)</option>
+                <option value="taebaeks-glory-shield" class="1-socket">Taebaek's Glory Ward</option>
+                <option value="whitstans-guard-shield" class="1-socket">Whitstan's Guard Round Shield</option>
+                <option value="socketed-set-shield" class="1-socket">Socketed Set Shield</option>
+            </optgroup>
+            <optgroup label="Unique">
+                <option value="homunculus-shield" class="1-socket">Homunculus Hierophant Trophy (Necromancer Only)</option>
+                <option value="alma-negra-shield" class="1-socket">Alma Negra Sacred Rondache (Paladin Only)</option>
+                <option value="hoz-shield" class="1-socket">Herald of Zakarum Gilded Shield (Paladin Only)</option>
+                <option value="pelta-lunata-shield" class="1-socket">Pelta Lunata Buckler</option>
+                <option value="steelclash-shield" class="1-socket">Steelclash Kite Shield</option>
+                <option value="visceratuant-shield" class="1-socket">Visceratuant Defender</option>
+                <option value="mosers-shield" class="2-socket">Moser's Blessed Circle Round Shield</option>
+                <option value="stormchaser-shield" class="1-socket">Stormchaser Scutum</option>
+                <option value="radaments-sphere-shield" class="1-socket">Radament's Sphere Ancient Shield</option>
+                <option value="blackoak-shield" class="1-socket">Blackoak Shield Luna</option>
+                <option value="stormshield-shield" class="1-socket">Stormshield Monarch</option>
+                <option value="head-hunters-glory-shield" class="3-socket">Head Hunter's Glory Troll Nest</option>
+                <option value="spirit-ward-shield" class="1-socket">Spirit Ward Ward</option>
+                <option value="socketed-unique-shield" class="1-socket">Socketed Unique Shield</option>
+            </optgroup>
+            <optgroup label="Runeword">
+                <option value="rhyme-shield" class="runeword">Rhyme Shield</option>
+                <option value="exile-shield" class="runeword">Exile Shield (Paladin Only)</option>
+                <option value="sanctuary-shield" class="runeword">Sanctuary Shield</option>
+                <option value="splendor-shield" class="runeword">Splendor Shield</option>
+            </optgroup>
+            <option value="na">Not Applicable</option>
         </select><br>
         <div id="htmlShael"></div>
         <label for="other-items">Other Items</label><br>
         <select id="other-items" name="other-items">
             <option selected disabled>---SELECT OTHER ITEMS---</option>
             <option value="guardian-angel-armor">Guardian Angel Templar Coat</option>
+            <option value="na">Not Applicable</option>
         </select><br>
         <button type="submit" id="btn">Calculate</button>
     </form>
