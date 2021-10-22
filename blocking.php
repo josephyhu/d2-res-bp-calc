@@ -24,7 +24,7 @@
 <main>
     <h2>Blocking</h2>
     <form action="blocking.php" method="post">
-        <label for="character">Character<span class="required">*</span></label>
+        <label for="character">Character<span class="required">*</span></label><br>
         <select id="character" name="character">
             <option disabled selected>---SELECT A CHARATER---</option>
             <option value="ama">Amazon</option>
@@ -37,10 +37,11 @@
         </select><br>
         <div id="divAma"></div>
         <div id="divDru"></div>
-        <div id="divPal"></div>
+        <div id="divPal">
+        <label for="shield">Shield<span class="required">*</span></label><br>
         <select id="shield" name="shield">
             <option disabled selected>---SELECT A SHIELD---</option>
-            <option vaiue="1-socket-normal-shield" class="1-socket">1 Socket Normal Shield</option>
+            <option value="1-socket-normal-shield" class="1-socket">1 Socket Normal Shield</option>
             <option value="2-socket-normal shield" class="2-socket">2 Socket Normal Shield</option>
             <option value="3-socket-normal-shield" class="3-socket">3 Socket Normal Shield</option>
             <option value="4-socket-normal-shield" class="4-socket">4 Socket Normal Shield</option>
@@ -91,7 +92,7 @@
             <option value="splendor-shield" class="runeword">Splendor Shield</option>
         </select><br>
         <div id="htmlShael"></div>
-        <label for="other-items">Other Items</label>
+        <label for="other-items">Other Items</label><br>
         <select id="other-items" name="other-items">
             <option selected disabled>---SELECT OTHER ITEMS---</option>
             <option value="guardian-angel-armor">Guardian Angel Templar Coat</option>
