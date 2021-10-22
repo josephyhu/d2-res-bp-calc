@@ -110,7 +110,7 @@
             <option value="guardian-angel-armor">Guardian Angel Templar Coat</option>
         </select><br>
         <button type="submit" id="btn">Calculate</button>
-        <button type="reset" id="reset">Reset</button>
+        <button type="reset">Reset</button>
     </form>
     <div id="calc">
         <?php
