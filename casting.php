@@ -49,9 +49,6 @@
                 <option value="caster-amulet">Caster Amulet</option>
                 <option value="caster-amulet-of-apprentice">Caster Amulet of Apprentice</option>
             </optgroup>
-            <optgroup label="Set">
-                <option value="tal-rashas-amulet">Tal Rasha's Adjudication Amulet (4 Set Items)</option>
-            </optgroup>
         </select><br>
         <label for="ring">Ring</label><br>
         <select id="ring" name="ring">
@@ -74,13 +71,10 @@
         <label for="armor">Body Armor</label><br>
         <select id="armor" name="armor">
             <option disabled selected>---SELECT A BODY ARMOR---</option>
-            <optgroup label="Set">
-                <option value="tal-rashas-armor">Tal Rasha's Guardianship Lacquered Plate (2 Set Items)</option>
-            </optgroup>
             <optgroup label="Unique">
                 <option value="vipermagi-armor">Skin of the Vipermagi Serpentskin Armor</option>
                 <option value="que-hegans-armor">Que-Hegan's Wisdom Mage Plate</option>
-                <option value="ormus-armor">Ormus' Robes Dusk Shroud</option>
+                <option value="ormus-robes-armor">Ormus' Robes Dusk Shroud</option>
             </optgroup>
             <optgroup label="Runeword">
                 <option value="stealth-armor">Stealth Armor</option>
@@ -115,9 +109,6 @@
             <option disabled selected>---SELECT A BELT---</option>
             <optgroup label="Crafted">
                 <option value="caster-belt">Caster Belt</option>
-            </optgroup>
-            <optgroup label="Set">
-                <option value="tal-rashas-belt">Tal Rasha's Fine-Spun Cloth Mesh Belt</option>
             </optgroup>
             <optgroup label="Unique">
                 <option value="arachnid-mesh-belt">Arachnid Mesh Spiderweb Sash</option>
@@ -173,13 +164,106 @@
         </select><br>
         <label for="set">Complete Set</label><br>
         <select id="set" name="set">
-            <option disabled selected>---SELECT A COMPLETE SET---</option>
-            <option value="arcannas-tricks-set">Arcanna's Tricks Complete Set</option>
-            <option value="cathans-traps-set">Cathan's Traps Complete Set</option>
+            <option disabled selected>---SELECT A PARTIAL OR A COMPLETE SET---</option>
+            <optgroup label="Partial Set">
+                <option value="tal-rashas-armor-and-amulet">Tal Rasha's Guardianship Lacquered Plate & Tal Rasha's Adjudication Amulet</option>
+                <option value="tal-rashas-armor-and-helm">Tal Rasha's Guardianship Lacquered Plate & Tal Rasha's Horadric Crest Death Mask</option>
+                <option value="tal-rashas-armor-and-belt">Tal Rasha's Guardianship Lacquered Plate & Tal Rasha's Fine-Spun Cloth Mesh Belt</option>
+                <option value="tal-rashas-armor-and-orb">Tal Rasha's Guardianship Lacquered Plate & Tal Rasha's Lidless Eye Swirling Crystal (Sorceress Only)</option>
+                <option value="tal-rashas-belt-amulet-and-helm">Tal Rasha's Belt, Amulet, & Helm</option>
+                <option value="tal-rashas-belt-amulet-and-armor">Tal Rasha's Belt, Amulet & Armor</option>
+                <option value="tal-rashas-belt-amulet-and-orb">Tal Rasha's Belt, Amulet, & Orb (Sorceress Only)</option>
+                <option value="tal-rashas-belt-helm-and-armor">Tal Rasha's Belt, Helm, & Armor</option>
+                <option value="tal-rashas-belt-helm-and-orb">Tal Rasha's Belt, Helm, & Orb (Sorceress Only)</option>
+                <option value="tal-rashas-belt-armor-and-orb">Tal Rasha's Belt, Armor, & Orb (Sorceress Only)</option>
+                <option value="tal-rashas-amulet-helm-armor-and-belt">Tal Rasha's Amulet, Helm, Armor, & Belt</option>
+                <option value="tal-rashas-amulet-helm-armor-and-orb">Tal Rasha's Amulet, Helm, Armor, & Orb (Sorceress Only)</option>
+                <option value="tal-rashas-amulet-helm-belt-and-orb">Tal Rasha's Amulet, Helm, Belt, & Orb (Sorceress Only)</option>
+                <option value="tal-rashas-amulet-armor-belt-and-orb">Tal Rasha's Amulet, Armor, Belt, & Orb (Sorceress Only)</option>
+            </optgroup>
+            <optgroup label="Complete Set">
+                <option value="arcannas-tricks-set">Arcanna's Tricks Complete Set</option>
+                <option value="cathans-traps-set">Cathan's Traps Complete Set</option>
+            </optgroup>
         </select><br>
         <button type="submit" id="btn">Calculate</button>
         <button type="reset">Reset</button>
     </form>
+    <?php
+    $character = $_POST['character'];
+    $amulet = $_POST['amulet'];
+    $ring = $_POST['ring'];
+    $helm = $_POST['helm'];
+    $armor = $_POST['armor'];
+    $shield = $_POST['shield'];
+    $gloves = $_POST['gloves'];
+    $belt = $_POST['belt'];
+    $weapon = $_POST['weapon'];
+    $set = $_POST['set'];
+    $weap = $_POST['weap'];
+    $druForm = $_POST['druForm'];
+    $necForm = $_POST['necForm'];
+    $spell = $_POST['spell'];
+    $rate = 0;
+
+    if ($amulet === 'amulet-of-apprentice' || $amulet === 'caster-amulet' ||
+        $ring === 'ring-of-apprentice ' || $helm === 'circlet-of-apprentice' ||
+        $shield === 'splendor-shield' || $belt === 'caster-belt' ||
+        $weapon === 'arm-of-king-leoric-wand' || $weapon === 'carin-shard-wand' ||
+        $weapon === 'earth-shifter-maul' || $weapon === 'orb-of-apprentice' ||
+        $weapon === 'rod of apprentice' || $weapon === 'spellsteel-axe' ||
+        $set === 'cathans-traps-set' || $set === 'tal-rashas-armor-and-amulet' ||
+        $set === 'tal-rashas-armor-and-helm' || $set === 'tal-rashas-armor-and-belt' ||
+        $set === 'tal-rashas-belt-amulet-and-helm') {
+        $rate += 10;
+    }
+    if ($amulet === 'caster-amulet-of-apprentice' || $helm === 'circlet-of-magus' ||
+        $armor === 'ormus-robes-armor' || $armor === 'que-hegans-armor' ||
+        $shield === 'lidless-wall-shield' || $shield === 'wall-of-the-eyeless-shield' ||
+        $set === 'trang-ouls-gloves' || $gloves === 'magefist-gloves' ||
+        $belt === 'arachnid-mesh-belt' || $weapon === 'chromatic-ire-staff' ||
+        $weapon === 'deaths-fathom-orb' || $weapon === 'iron-jang-bong-staff' ||
+        $weapon === 'orb-of-magus' || $weapon === 'rod-of-magus' ||
+        $weapon === 'sanders-wand' || $set === 'tal-rashas-orb' ||
+        $weapon === 'umes-lament-wand' || $weapon === 'white-wand' ||
+        $set === 'arcannas-tricks-set' || $set === 'sanders-wand' ||
+        $set === 'tal-rashas-belt-amulet-and-armor' || $set === 'tal-rashas-belt-helm-and-armor') {
+        $rate += 20;
+    }
+    if ($armor === 'stealth-armor' || $weapon === 'boneshade-wand' ||
+        $weapon === 'fortitude-1h-weapon' || $weapon === 'fortitude-2h-weapon' ||
+        $helm === 'griffons-diadem' || $armor === 'fortitude-armor') {
+        $rate += 25;
+    }
+    if ($set === 'tal-rashas-armor-and-orb' || $set === 'tal-rashas-belt-amulet-and-orb' ||
+        $set === 'tal-rashas-belt-helm-and-orb' || $set === 'tal-rashas-amulet-helm-armor-and-belt' ||
+        $armor === 'skin-of-the-vipermagi-armor' || $shield === 'darkforce-spawn-head' ||
+        $weapon === 'blackhand-key-wand' || $weapon === 'maelstrom-wand' ||
+        $weapon === 'mang-songs-lesson-staff' || $set === 'najs-staff' ||
+        $weapon === 'the-oculus-orb' || $weapon === 'razorswitch-staff') {
+        $rate += 30;
+    }
+    if ($weapon === 'memory-staff') {
+        $rate += 33;
+    }
+    if ($shield === 'spirit-shield' || $weapon === 'spirit-1h-sword' ||
+        $weapon === 'spirit-2h-sword' || $weapon === 'insight-polearm' ||
+        $weapon === 'insight-staff') {
+        $rate += 35;
+    }
+    if ($weapon === 'eschutas-temper-orb' || $weapon === 'hoto-mace' ||
+        $weapon === 'hoto-staff' || $set === 'tal-rashas-belt-armor-and-orb' ||
+        $set === 'tal-rashas-amulet-helm-armor-and-orb' || $set === 'tal-rashas-amulet-helm-belt-and-orb') {
+        $rate += 40;
+    }
+    if ($weapon === 'ondals-wisdom-staff') {
+        $rate += 45;
+    }
+    if ($weapon === 'wizardspike-dagger' || $weapon === 'suicide-branch-wand' ||
+        $set === 'tal-rashas-amulet-armor-belt-and-orb') {
+        $rate += 50;
+    }
+    ?>
 </main>
 <script
 	src="https://code.jquery.com/jquery-3.6.0.min.js"
