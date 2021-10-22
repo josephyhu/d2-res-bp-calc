@@ -39,6 +39,30 @@
         <div id="divDru"></div>
         <div id="divNec"></div>
         <div id="divSor"></div>
+        <label for="set">Partial and Complete Set Items</label><br>
+        <select id="set" name="set">
+            <option disabled selected>---SELECT A PARTIAL OR A COMPLETE SET---</option>
+            <optgroup label="Partial Set">
+                <option value="tal-rashas-armor-and-amulet">Tal Rasha's Guardianship Lacquered Plate & Tal Rasha's Adjudication Amulet</option>
+                <option value="tal-rashas-armor-and-helm">Tal Rasha's Guardianship Lacquered Plate & Tal Rasha's Horadric Crest Death Mask</option>
+                <option value="tal-rashas-armor-and-belt">Tal Rasha's Guardianship Lacquered Plate & Tal Rasha's Fine-Spun Cloth Mesh Belt</option>
+                <option value="tal-rashas-armor-and-orb">Tal Rasha's Guardianship Lacquered Plate & Tal Rasha's Lidless Eye Swirling Crystal (Sorceress Only)</option>
+                <option value="tal-rashas-belt-amulet-and-helm">Tal Rasha's Belt, Amulet, & Helm</option>
+                <option value="tal-rashas-belt-amulet-and-armor">Tal Rasha's Belt, Amulet & Armor</option>
+                <option value="tal-rashas-belt-amulet-and-orb">Tal Rasha's Belt, Amulet, & Orb (Sorceress Only)</option>
+                <option value="tal-rashas-belt-helm-and-armor">Tal Rasha's Belt, Helm, & Armor</option>
+                <option value="tal-rashas-belt-helm-and-orb">Tal Rasha's Belt, Helm, & Orb (Sorceress Only)</option>
+                <option value="tal-rashas-belt-armor-and-orb">Tal Rasha's Belt, Armor, & Orb (Sorceress Only)</option>
+                <option value="tal-rashas-amulet-helm-armor-and-belt">Tal Rasha's Amulet, Helm, Armor, & Belt</option>
+                <option value="tal-rashas-amulet-helm-armor-and-orb">Tal Rasha's Amulet, Helm, Armor, & Orb (Sorceress Only)</option>
+                <option value="tal-rashas-amulet-helm-belt-and-orb">Tal Rasha's Amulet, Helm, Belt, & Orb (Sorceress Only)</option>
+                <option value="tal-rashas-amulet-armor-belt-and-orb">Tal Rasha's Amulet, Armor, Belt, & Orb (Sorceress Only)</option>
+            </optgroup>
+            <optgroup label="Complete Set">
+                <option value="arcannas-tricks-set">Arcanna's Tricks Complete Set</option>
+                <option value="cathans-traps-set">Cathan's Traps Complete Set</option>
+            </optgroup>
+        </select><br>
         <label for="amulet">Amulet</label><br>
         <select id="amulet" name="amulet">
             <option disabled selected>---SELECT AN AMULET---</option>
@@ -160,30 +184,6 @@
                 <option value="insight-staff">Insight Staff</option>
                 <option value="spirit-1h-sword">Spirit 1-H Sword</option>
                 <option value="spirit-2h-sword">Spirit 2-H Sword</option>
-            </optgroup>
-        </select><br>
-        <label for="set">Complete Set</label><br>
-        <select id="set" name="set">
-            <option disabled selected>---SELECT A PARTIAL OR A COMPLETE SET---</option>
-            <optgroup label="Partial Set">
-                <option value="tal-rashas-armor-and-amulet">Tal Rasha's Guardianship Lacquered Plate & Tal Rasha's Adjudication Amulet</option>
-                <option value="tal-rashas-armor-and-helm">Tal Rasha's Guardianship Lacquered Plate & Tal Rasha's Horadric Crest Death Mask</option>
-                <option value="tal-rashas-armor-and-belt">Tal Rasha's Guardianship Lacquered Plate & Tal Rasha's Fine-Spun Cloth Mesh Belt</option>
-                <option value="tal-rashas-armor-and-orb">Tal Rasha's Guardianship Lacquered Plate & Tal Rasha's Lidless Eye Swirling Crystal (Sorceress Only)</option>
-                <option value="tal-rashas-belt-amulet-and-helm">Tal Rasha's Belt, Amulet, & Helm</option>
-                <option value="tal-rashas-belt-amulet-and-armor">Tal Rasha's Belt, Amulet & Armor</option>
-                <option value="tal-rashas-belt-amulet-and-orb">Tal Rasha's Belt, Amulet, & Orb (Sorceress Only)</option>
-                <option value="tal-rashas-belt-helm-and-armor">Tal Rasha's Belt, Helm, & Armor</option>
-                <option value="tal-rashas-belt-helm-and-orb">Tal Rasha's Belt, Helm, & Orb (Sorceress Only)</option>
-                <option value="tal-rashas-belt-armor-and-orb">Tal Rasha's Belt, Armor, & Orb (Sorceress Only)</option>
-                <option value="tal-rashas-amulet-helm-armor-and-belt">Tal Rasha's Amulet, Helm, Armor, & Belt</option>
-                <option value="tal-rashas-amulet-helm-armor-and-orb">Tal Rasha's Amulet, Helm, Armor, & Orb (Sorceress Only)</option>
-                <option value="tal-rashas-amulet-helm-belt-and-orb">Tal Rasha's Amulet, Helm, Belt, & Orb (Sorceress Only)</option>
-                <option value="tal-rashas-amulet-armor-belt-and-orb">Tal Rasha's Amulet, Armor, Belt, & Orb (Sorceress Only)</option>
-            </optgroup>
-            <optgroup label="Complete Set">
-                <option value="arcannas-tricks-set">Arcanna's Tricks Complete Set</option>
-                <option value="cathans-traps-set">Cathan's Traps Complete Set</option>
             </optgroup>
         </select><br>
         <button type="submit" id="btn">Calculate</button>
