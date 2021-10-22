@@ -26,7 +26,7 @@
     <form action="blocking.php" method="post">
         <label for="character">Character<span class="required">*</span></label><br>
         <select id="character" name="character">
-            <option disabled selected>---SELECT A CHARATER---</option>
+            <option disabled selected>---SELECT A CHARACTER---</option>
             <option value="ama">Amazon</option>
             <option value="ass">Assassin</option>
             <option value="bar">Barbarian</option>
