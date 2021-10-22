@@ -37,7 +37,7 @@
         </select><br>
         <div id="divAma"></div>
         <div id="divDru"></div>
-        <div id="divPal">
+        <div id="divPal"></div>
         <label for="shield">Shield<span class="required">*</span></label><br>
         <select id="shield" name="shield">
             <option disabled selected>---SELECT A SHIELD---</option>
