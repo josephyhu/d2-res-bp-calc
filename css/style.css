@@ -31,3 +31,7 @@ nav ul li a:focus {
 .required {
     color: red;
 }
+table, th, td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
