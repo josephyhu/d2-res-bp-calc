@@ -267,7 +267,7 @@
     if ($character === 'ama') {
         if ($weap === 'weap1') {
             echo '<table>';
-            echo '<caption>Using a Bow</caption>';
+            echo '<caption>Using a bow</caption>';
             echo '<thead>';
             echo '<tr>';
             echo '<th>Faster Cast Rate</th>';
@@ -368,7 +368,7 @@
             }
         } else if ($weap === 'weap2') {
 	        echo '<table>';
-	        echo '<caption>Using a Crowssbow or 2-H Sword</caption>';
+	        echo '<caption>Using a crossbow or 2-H sword</caption>';
 	        echo '<thead>';
 	        echo '<tr>';
 	        echo '<th>Faster Cast Rate</th>';
@@ -502,7 +502,7 @@
 	        }
         } else if ($weap === 'weap3') {
 	        echo '<table>';
-	        echo '<caption>Using a Staff, Hammer, Axe, Polearm, Knife, or Javelin</caption>';
+	        echo '<caption>Using a staff, hammer, axe, polearm, knife, or javelin</caption>';
 	        echo '<thead>';
 	        echo '<tr>';
 	        echo '<th>Faster Cast Rate</th>';
@@ -644,7 +644,7 @@
 	        }
         } else if ($weap === 'weap4') {
 	        echo '<table>';
-	        echo '<caption>Using No Weapon</caption>';
+	        echo '<caption>Using no weapons</caption>';
 	        echo '<thead>';
 	        echo '<tr>';
 	        echo '<th>Faster Cast Rate</th>';
@@ -889,6 +889,951 @@
 		    echo "Cast Frames: 9<br>";
 		    echo "Action Flags: 6<br>";
 		    echo "Further FCR useless.";
+	    }
+    } else if ($character === 'bar') {
+	    echo '<table>';
+	    echo '<thead>';
+	    echo '<tr>';
+	    echo '<th>Faster Cast Rate</th>';
+	    echo '<th>Cast Frames</th>';
+	    echo '<th>Action Flags</th>';
+	    echo '</tr>';
+	    echo '</thead>';
+	    echo '<tbody>';
+	    echo '<tr>';
+	    echo '<td>0</td>';
+	    echo '<td>13</td>';
+	    echo '<td rowspan="2">9</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>9</td>';
+	    echo '<td rowspan="2">12</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>15</td>';
+	    echo '<td rowspan="3">8</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>20</td>';
+	    echo '<td>11</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>37</td>';
+	    echo '<td rowspan="2">10</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>39</td>';
+	    echo '<td rowspan="2">7</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>63</td>';
+	    echo '<td rowspan="2">9</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>86</td>';
+	    echo '<td rowspan="3">6</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>105</td>';
+	    echo '<td>8</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>200</td>';
+	    echo '<td>7</td>';
+	    echo '</tr>';
+	    echo '</tbody>';
+	    echo '</table>';
+
+	    if ($rate < 9) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 13<br>";
+		    echo "Action Flags: 9<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (9 - $rate) . "%";
+	    } else if ($rate < 15) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 12<br>";
+		    echo "Action Flags: 9<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (15 - $rate) . "%";
+	    } else if ($rate < 20) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 12<br>";
+		    echo "Action Flags: 8<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (20 - $rate) . "%";
+	    } else if ($rate < 37) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 11<br>";
+		    echo "Action Flags: 8<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (37 - $rate) . "%";
+	    } else if ($rate < 39) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 10<br>";
+		    echo "Action Flags: 8<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (39 - $rate) . "%";
+	    } else if ($rate < 63) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 10<br>";
+		    echo "Action Flags: 7<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (63 - $rate) . "%";
+	    } else if ($rate < 86) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 9<br>";
+		    echo "Action Flags: 7<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (86 - $rate) . "%";
+	    } else if ($rate < 105) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 9<br>";
+		    echo "Action Flags: 6<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (105 - $rate) . "%";
+        } else if ($rate < 200) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 8<br>";
+		    echo "Action Flags: 6<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (200 - $rate) . "%";
+	    } else {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 7<br>";
+		    echo "Action Flags: 6<br>";
+		    echo "Further FCR useless.";
+	    }
+    } else if ($character === 'dru') {
+	    if ( $druForm === 'human' ) {
+		    echo '<table>';
+		    echo '<caption>Human form</caption>';
+		    echo '<thead>';
+		    echo '<tr>';
+		    echo '<th>Faster Cast Rate</th>';
+		    echo '<th>Cast Frames</th>';
+		    echo '<th>Action Flags</th>';
+		    echo '</tr>';
+		    echo '</thead>';
+		    echo '<tbody>';
+		    echo '<tr>';
+		    echo '<td>0</td>';
+		    echo '<td>18</td>';
+		    echo '<td rowspan="3">10</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>4</td>';
+		    echo '<td>17</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>10</td>';
+		    echo '<td rowspan="2">16</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>11</td>';
+		    echo '<td rowspan="2">9</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>19</td>';
+		    echo '<td>15</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>30</td>';
+		    echo '<td>14</td>';
+		    echo '<td rowspan="2">8</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>46</td>';
+		    echo '<td rowspan="2">13</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>63</td>';
+		    echo '<td rowspan="3">7</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>68</td>';
+		    echo '<td>12</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>99</td>';
+		    echo '<td rowspan="2">11</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>142</td>';
+		    echo '<td rowspan="2">6</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>163</td>';
+		    echo '<td>10</td>';
+		    echo '</tr>';
+		    echo '</tbody>';
+		    echo '</table>';
+
+		    if ( $rate < 4 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 18<br>";
+			    echo "Action Flags: 10<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 4 - $rate ) . "%";
+		    } elseif ( $rate < 10 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 17<br>";
+			    echo "Action Flags: 10<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 10 - $rate ) . "%";
+		    } elseif ( $rate < 11 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 16<br>";
+			    echo "Action Flags: 10<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 11 - $rate ) . "%";
+		    } elseif ( $rate < 19 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 16<br>";
+			    echo "Action Flags: 9<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 19 - $rate ) . "%";
+		    } elseif ( $rate < 30 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 15<br>";
+			    echo "Action Flags: 9<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 30 - $rate ) . "%";
+		    } elseif ( $rate < 46 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 14<br>";
+			    echo "Action Flags: 8<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 46 - $rate ) . "%";
+		    } elseif ( $rate < 63 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 13<br>";
+			    echo "Action Flags: 8<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 63 - $rate ) . "%";
+		    } elseif ( $rate < 68 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 13<br>";
+			    echo "Action Flags: 7<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 68 - $rate ) . "%";
+		    } elseif ( $rate < 99 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 12<br>";
+			    echo "Action Flags: 7<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 99 - $rate ) . "%";
+		    } elseif ( $rate < 142 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 11<br>";
+			    echo "Action Flags: 7<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 142 - $rate ) . "%";
+		    } elseif ( $rate < 163 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 11<br>";
+			    echo "Action Flags: 6<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 163 - $rate ) . "%";
+		    } else {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 10<br>";
+			    echo "Action Flags: 6<br>";
+			    echo "Further FCR useless.";
+		    }
+	    } elseif ( $druForm === 'werewolf' ) {
+		    echo '<table>';
+		    echo '<caption>Werewolf form</caption>';
+		    echo '<thead>';
+		    echo '<tr>';
+		    echo '<th>Faster Cast Rate</th>';
+		    echo '<th>Cast Frames</th>';
+		    echo '<th>Action Flags</th>';
+		    echo '</tr>';
+		    echo '</thead>';
+		    echo '<tbody>';
+		    echo '<tr>';
+		    echo '<td>0</td>';
+		    echo '<td>16</td>';
+		    echo '<td rowspan="2">8</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>6</td>';
+		    echo '<td rowspan="2">15</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>10</td>';
+		    echo '<td rowspan="3">7</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>14</td>';
+		    echo '<td>14</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>26</td>';
+		    echo '<td rowspan="2">13</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>37</td>';
+		    echo '<td rowspan="3">6</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>40</td>';
+		    echo '<td>12</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>60</td>';
+		    echo '<td>11</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>95</td>';
+		    echo '<td>10</td>';
+		    echo '<td rowspan="2">5</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>157</td>';
+		    echo '<td>9</td>';
+		    echo '</tr>';
+		    echo '</tbody>';
+		    echo '</table>';
+
+		    if ( $rate < 6 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 16<br>";
+			    echo "Action Flags: 8<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 6 - $rate ) . "%";
+		    } elseif ( $rate < 10 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 15<br>";
+			    echo "Action Flags: 8<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 10 - $rate ) . "%";
+		    } elseif ( $rate < 15 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 15<br>";
+			    echo "Action Flags: 7<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 14 - $rate ) . "%";
+		    } elseif ( $rate < 26 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 14<br>";
+			    echo "Action Flags: 7<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 26 - $rate ) . "%";
+		    } elseif ( $rate < 37 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 13<br>";
+			    echo "Action Flags: 7<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 37 - $rate ) . "%";
+		    } elseif ( $rate < 40 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 13<br>";
+			    echo "Action Flags: 6<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 40 - $rate ) . "%";
+		    } elseif ( $rate < 60 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 12<br>";
+			    echo "Action Flags: 6<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 60 - $rate ) . "%";
+		    } elseif ( $rate < 95 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 11<br>";
+			    echo "Action Flags: 6<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 95 - $rate ) . "%";
+		    } elseif ( $rate < 157 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 10<br>";
+			    echo "Action Flags: 5<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 157 - $rate ) . "%";
+		    } else {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 9<br>";
+			    echo "Action Flags: 5<br>";
+			    echo "Further FCR useless.";
+		    }
+	    } elseif ( $druForm === 'werebear' ) {
+		    echo '<table>';
+		    echo '<caption>Werebear form</caption>';
+		    echo '<thead>';
+		    echo '<tr>';
+		    echo '<th>Faster Cast Rate</th>';
+		    echo '<th>Cast Frames</th>';
+		    echo '<th>Action Flags</th>';
+		    echo '</tr>';
+		    echo '</thead>';
+		    echo '<tbody>';
+		    echo '<tr>';
+		    echo '<td>0</td>';
+		    echo '<td>16</td>';
+		    echo '<td>9</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>7</td>';
+		    echo '<td>15</td>';
+		    echo '<td rowspan="2">8</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>15</td>';
+		    echo '<td>14</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>26</td>';
+		    echo '<td>13</td>';
+		    echo '<td rowspan="2">7</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>40</td>';
+		    echo '<td>12</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>63</td>';
+		    echo '<td>11</td>';
+		    echo '<td rowspan="2">6</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>99</td>';
+		    echo '<td>10</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>163</td>';
+		    echo '<td>9</td>';
+		    echo '<td>5</td>';
+		    echo '</tr>';
+		    echo '</tbody>';
+		    echo '</table>';
+
+		    if ( $rate < 7 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 16<br>";
+			    echo "Action Flags: 9<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 7 - $rate ) . "%";
+		    } elseif ( $rate < 15 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 15<br>";
+			    echo "Action Flags: 8<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 15 - $rate ) . "%";
+		    } elseif ( $rate < 26 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 14<br>";
+			    echo "Action Flags: 8<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 26 - $rate ) . "%";
+		    } elseif ( $rate < 40 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 13<br>";
+			    echo "Action Flags: 7<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 40 - $rate ) . "%";
+		    } elseif ( $rate < 63 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 12<br>";
+			    echo "Action Flags: 7<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 63 - $rate ) . "%";
+		    } elseif ( $rate < 99 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 11<br>";
+			    echo "Action Flags: 6<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 99 - $rate ) . "%";
+		    } elseif ( $rate < 163 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 10<br>";
+			    echo "Action Flags: 6<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 163 - $rate ) . "%";
+		    } else {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 9<br>";
+			    echo "Action Flags: 5<br>";
+			    echo "Further FCR useless.";
+		    }
+	    }
+    } else if ($character === 'nec') {
+        if ($necForm === 'human') {
+            echo '<table>';
+	        echo '<caption>Human form</caption>';
+	        echo '<thead>';
+	        echo '<tr>';
+	        echo '<th>Faster Cast Rate</th>';
+	        echo '<th>Cast Frames</th>';
+	        echo '<th>Action Flags</th>';
+	        echo '</tr>';
+	        echo '</thead>';
+	        echo '<tbody>';
+	        echo '<tr>';
+	        echo '<td>0</td>';
+	        echo '<td>15</td>';
+	        echo '<td rowspan="2">8</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>9</td>';
+	        echo '<td>14</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>18</td>';
+	        echo '<td>13</td>';
+            echo '<td rowspan="2">7</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>30</td>';
+	        echo '<td>12</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>48</td>';
+	        echo '<td>11</td>';
+            echo '<td rowspan="2">6</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>75</td>';
+            echo '<td>10</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>125</td>';
+	        echo '<td>9</td>';
+            echo '<td>5</td>';
+	        echo '</tr>';
+	        echo '</tbody>';
+	        echo '</table>';
+
+	        if ( $rate < 9 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 15<br>";
+		        echo "Action Flags: 8<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 9 - $rate ) . "%";
+	        } elseif ( $rate < 18 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 14<br>";
+		        echo "Action Flags: 8<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 18 - $rate ) . "%";
+	        } elseif ( $rate < 30 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 13<br>";
+		        echo "Action Flags: 7<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 30 - $rate ) . "%";
+	        } elseif ( $rate < 48 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 12<br>";
+		        echo "Action Flags: 7<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 48 - $rate ) . "%";
+	        } elseif ( $rate < 75 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 11<br>";
+		        echo "Action Flags: 6<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 75 - $rate ) . "%";
+	        } elseif ( $rate < 125 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 10<br>";
+		        echo "Action Flags: 6<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 125 - $rate ) . "%";
+            } else {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 9<br>";
+		        echo "Action Flags: 5<br>";
+		        echo "Further FCR useless.";
+	        }
+        } else if ($necForm === 'vampire') {
+		    echo '<table>';
+		    echo '<caption>Vampire form</caption>';
+		    echo '<thead>';
+		    echo '<tr>';
+		    echo '<th>Faster Cast Rate</th>';
+		    echo '<th>Cast Frames</th>';
+		    echo '<th>Action Flags</th>';
+		    echo '</tr>';
+		    echo '</thead>';
+		    echo '<tbody>';
+		    echo '<tr>';
+		    echo '<td>0</td>';
+		    echo '<td>23</td>';
+		    echo '<td rowspan="4">5</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>6</td>';
+		    echo '<td>22</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>11</td>';
+		    echo '<td>21</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>18</td>';
+		    echo '<td>20</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>24</td>';
+		    echo '<td>19</td>';
+		    echo '<td rowspan="5">4</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>35</td>';
+		    echo '<td>18</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>48</td>';
+		    echo '<td>17</td>';
+		    echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>65</td>';
+	        echo '<td>16</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>86</td>';
+	        echo '<td>15</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>120</td>';
+	        echo '<td>14</td>';
+            echo '<td rowspan="2">3</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>180</td>';
+	        echo '<td>13</td>';
+	        echo '</tr>';
+		    echo '</tbody>';
+		    echo '</table>';
+
+		    if ( $rate < 6 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 23<br>";
+			    echo "Action Flags: 5<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 6 - $rate ) . "%";
+		    } elseif ( $rate < 11 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 22<br>";
+			    echo "Action Flags: 5<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 11 - $rate ) . "%";
+		    } elseif ( $rate < 18 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 21<br>";
+			    echo "Action Flags: 5<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 18 - $rate ) . "%";
+		    } elseif ( $rate < 24 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 20<br>";
+			    echo "Action Flags: 5<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 24 - $rate ) . "%";
+		    } elseif ( $rate < 35 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 19<br>";
+			    echo "Action Flags: 4<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 35 - $rate ) . "%";
+		    } elseif ( $rate < 48 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 18<br>";
+			    echo "Action Flags: 4<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 48 - $rate ) . "%";
+		    } elseif ( $rate < 65 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 17<br>";
+			    echo "Action Flags: 4<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 65 - $rate ) . "%";
+		    } elseif ( $rate < 86 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 16<br>";
+			    echo "Action Flags: 4<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 86 - $rate ) . "%";
+		    } elseif ( $rate < 120 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 15<br>";
+			    echo "Action Flags: 4<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 120 - $rate ) . "%";
+		    } elseif ( $rate < 180 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 14<br>";
+			    echo "Action Flags: 3<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 180 - $rate ) . "%";
+		    } else {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 13<br>";
+			    echo "Action Flags: 3<br>";
+			    echo "Further FCR useless.";
+		    }
+	    }
+    } else if ($character === 'pal') {
+	    echo '<table>';
+	    echo '<thead>';
+	    echo '<tr>';
+	    echo '<th>Faster Cast Rate</th>';
+	    echo '<th>Cast Frames</th>';
+	    echo '<th>Action Flags</th>';
+	    echo '</tr>';
+	    echo '</thead>';
+	    echo '<tbody>';
+	    echo '<tr>';
+	    echo '<td>0</td>';
+	    echo '<td>13</td>';
+	    echo '<td rowspan="2">9</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>9</td>';
+	    echo '<td rowspan="2">14</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>15</td>';
+	    echo '<td rowspan="3">8</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>18</td>';
+	    echo '<td>13</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>30</td>';
+	    echo '<td rowspan="2">12</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>39</td>';
+	    echo '<td rowspan="3">7</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>48</td>';
+	    echo '<td>11</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>75</td>';
+	    echo '<td rowspan="2">10</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>86</td>';
+	    echo '<td rowspan="2">6</td>';
+	    echo '</tr>';
+	    echo '<tr>';
+	    echo '<td>125</td>';
+	    echo '<td>9</td>';
+	    echo '</tr>';
+	    echo '</tbody>';
+	    echo '</table>';
+
+	    if ($rate < 9) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 15<br>";
+		    echo "Action Flags: 9<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (9 - $rate) . "%";
+	    } else if ($rate < 15) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 14<br>";
+		    echo "Action Flags: 9<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (15 - $rate) . "%";
+	    } else if ($rate < 18) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 14<br>";
+		    echo "Action Flags: 8<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (18 - $rate) . "%";
+	    } else if ($rate < 30) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 13<br>";
+		    echo "Action Flags: 8<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (30 - $rate) . "%";
+	    } else if ($rate < 39) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 12<br>";
+		    echo "Action Flags: 8<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (39 - $rate) . "%";
+	    } else if ($rate < 48) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 12<br>";
+		    echo "Action Flags: 7<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (48 - $rate) . "%";
+	    } else if ($rate < 75) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 11<br>";
+		    echo "Action Flags: 7<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (75 - $rate) . "%";
+	    } else if ($rate < 86) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 10<br>";
+		    echo "Action Flags: 7<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (86 - $rate) . "%";
+        } else if ($rate < 125) {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 10<br>";
+		    echo "Action Flags: 6<br>";
+		    echo "Required Faster Cast Rate for the next breakpoint: " . (125 - $rate) . "%";
+	    } else {
+		    echo "Faster Cast Rate: $rate%<br>";
+		    echo "Cast Frames: 9<br>";
+		    echo "Action Flags: 6<br>";
+		    echo "Further FCR useless.";
+	    }
+    } else if ($character === 'sor') {
+        if ($spell === 'light') {
+	        echo '<table>';
+            echo '<caption>Lightning/Chain Lightning</caption>';
+	        echo '<thead>';
+	        echo '<tr>';
+	        echo '<th>Faster Cast Rate</th>';
+	        echo '<th>Cast Frames</th>';
+	        echo '<th>Action Flags</th>';
+	        echo '</tr>';
+	        echo '</thead>';
+	        echo '<tbody>';
+	        echo '<tr>';
+	        echo '<td>0</td>';
+	        echo '<td>19</td>';
+	        echo '<td rowspan="3">7</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>7</td>';
+	        echo '<td>18</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>15</td>';
+	        echo '<td rowspan="2">17</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>20</td>';
+	        echo '<td rowspan="4">6</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>23</td>';
+	        echo '<td>16</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>35</td>';
+	        echo '<td>15</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>52</td>';
+	        echo '<td rowspan="2">14</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>63</td>';
+	        echo '<td rowspan="3">5</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>78</td>';
+	        echo '<td>13</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>117</td>';
+	        echo '<td>12</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>194</td>';
+	        echo '<td rowspan="2">11</td>';
+            echo '<td rowspan="2">4</td>';
+	        echo '</tr>';
+	        echo '<tr>';
+	        echo '<td>200</td>';
+	        echo '</tr>';
+	        echo '</tbody>';
+	        echo '</table>';
+
+	        if ( $rate < 7 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 19<br>";
+		        echo "Action Flags: 7<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 7 - $rate ) . "%";
+	        } elseif ( $rate < 15 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 18<br>";
+		        echo "Action Flags: 7<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 15 - $rate ) . "%";
+	        } elseif ( $rate < 20 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 17<br>";
+		        echo "Action Flags: 7<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 20 - $rate ) . "%";
+	        } elseif ( $rate < 23 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 17<br>";
+		        echo "Action Flags: 6<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 23 - $rate ) . "%";
+	        } elseif ( $rate < 35 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 16<br>";
+		        echo "Action Flags: 6<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 35 - $rate ) . "%";
+	        } elseif ( $rate < 52 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 15<br>";
+		        echo "Action Flags: 6<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 52 - $rate ) . "%";
+	        } elseif ( $rate < 63 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 14<br>";
+		        echo "Action Flags: 6<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 63 - $rate ) . "%";
+	        } elseif ( $rate < 78 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 14<br>";
+		        echo "Action Flags: 5<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 78 - $rate ) . "%";
+	        } elseif ( $rate < 117 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 13<br>";
+		        echo "Action Flags: 5<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 117 - $rate ) . "%";
+	        } elseif ( $rate < 194 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 12<br>";
+		        echo "Action Flags: 5<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 194 - $rate ) . "%";
+	        } elseif ( $rate < 200 ) {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 11<br>";
+		        echo "Action Flags: 4<br>";
+		        echo "Required Faster Cast Rate for the next breakpoint: " . ( 200 - $rate ) . "%";
+	        } else {
+		        echo "Faster Cast Rate: $rate%<br>";
+		        echo "Cast Frames: 11<br>";
+		        echo "Action Flags: 4<br>";
+		        echo "Further FCR useless.";
+	        }
+        } else if ($spell === 'other') {
+		    echo '<table>';
+		    echo '<caption>Other spells</caption>';
+		    echo '<thead>';
+		    echo '<tr>';
+		    echo '<th>Faster Cast Rate</th>';
+		    echo '<th>Cast Frames</th>';
+		    echo '<th>Action Flags</th>';
+		    echo '</tr>';
+		    echo '</thead>';
+		    echo '<tbody>';
+		    echo '<tr>';
+		    echo '<td>0</td>';
+		    echo '<td>13</td>';
+		    echo '<td rowspan="2">7</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>9</td>';
+		    echo '<td>12</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>20</td>';
+		    echo '<td>11</td>';
+            echo '<td rowspan="2">6</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>37</td>';
+		    echo '<td>10</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>63</td>';
+		    echo '<td>9</td>';
+            echo '<td rowspan="2">5</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>105</td>';
+		    echo '<td>8</td>';
+		    echo '</tr>';
+		    echo '<tr>';
+		    echo '<td>200</td>';
+		    echo '<td>7</td>';
+            echo '<td>4</td>';
+		    echo '</tr>';
+		    echo '</tbody>';
+		    echo '</table>';
+
+		    if ( $rate < 9 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 13<br>";
+			    echo "Action Flags: 7<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 9 - $rate ) . "%";
+		    } elseif ( $rate < 20 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 12<br>";
+			    echo "Action Flags: 7<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 20 - $rate ) . "%";
+		    } elseif ( $rate < 37 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 11<br>";
+			    echo "Action Flags: 6<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 37 - $rate ) . "%";
+		    } elseif ( $rate < 63 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 10<br>";
+			    echo "Action Flags: 6<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 63 - $rate ) . "%";
+		    } elseif ( $rate < 105 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 9<br>";
+			    echo "Action Flags: 5<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 105 - $rate ) . "%";
+		    } elseif ( $rate < 200 ) {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 8<br>";
+			    echo "Action Flags: 5<br>";
+			    echo "Required Faster Cast Rate for the next breakpoint: " . ( 200 - $rate ) . "%";
+            } else {
+			    echo "Faster Cast Rate: $rate%<br>";
+			    echo "Cast Frames: 7<br>";
+			    echo "Action Flags: 4<br>";
+			    echo "Further FCR useless.";
+		    }
 	    }
     }
     ?>

@@ -28,7 +28,7 @@ $(document).ready(function() {
         }
         if ($(this).val() === 'nec') {
             htmlNec = "<label>Form (Necromancer Only)<span class='required'>*</span><br>";
-            htmlNec += "<input type='radio' id='normal' name='necForm' value='normal' required>";
+            htmlNec += "<input type='radio' id='normal' name='necForm' value='human' required>";
             htmlNec += "<label for='normal'>Human</label><br>";
             htmlNec += "<input type='radio' id='vampire' name='necForm' value='vampire'>";
             htmlNec += "<label for='vampire'>Vampire</label>";
